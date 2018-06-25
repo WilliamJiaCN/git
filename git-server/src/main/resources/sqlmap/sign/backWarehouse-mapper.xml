@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.sign.BackWarehouseMapper" >
+  <resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.sign.BackWarehouseDO" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="company_id" property="companyId" jdbcType="BIGINT" />
+    <result column="waybill_id" property="waybillId" jdbcType="BIGINT" />
+    <result column="dispatcher_id" property="dispatcherId" jdbcType="BIGINT" />
+    <result column="dipatcher_detail_id" property="dipatcherDetailId" jdbcType="BIGINT" />
+    <result column="storage_batch_code" property="storageBatchCode" jdbcType="VARCHAR" />
+    <result column="storage_dot" property="storageDot" jdbcType="INTEGER" />
+    <result column="storage_time" property="storageTime" jdbcType="BIGINT" />
+    <result column="storage_name" property="storageName" jdbcType="VARCHAR" />
+    <result column="deliveries_number" property="deliveriesNumber" jdbcType="INTEGER" />
+    <result column="storage_number" property="storageNumber" jdbcType="INTEGER" />
+    <result column="back_type" property="backType" jdbcType="INTEGER" />
+    <result column="back_delivery_type" property="backDeliveryType" jdbcType="INTEGER" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="back_instructions" property="backInstructions" jdbcType="VARCHAR" />
+    <result column="create_user" property="createUser" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    <result column="update_user" property="updateUser" jdbcType="INTEGER" />
+    <result column="sign_id" property="signId" jdbcType="BIGINT" />
+    <result column="idelete" property="idelete" jdbcType="BIT"  />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, company_id, waybill_id, dispatcher_id, dipatcher_detail_id, storage_batch_code, 
+    storage_dot, storage_time, storage_name, deliveries_number, storage_number, back_type, 
+    back_delivery_type, goods_name, back_instructions, create_user, create_time, update_time, 
+    update_user,sign_id,idelete
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from back_warehouse
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >-->
+    <!--delete from back_warehouse-->
+    <!--where id = #{id,jdbcType=BIGINT}-->
+  <!--</delete>-->
+
+
+
+  <insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.BackWarehouseDO" >
+    insert into back_warehouse (id, company_id, waybill_id, 
+      dispatcher_id, dipatcher_detail_id, storage_batch_code, 
+      storage_dot, storage_time, storage_name, 
+      deliveries_number, storage_number, back_type, 
+      back_delivery_type, goods_name, back_instructions, 
+      create_user, create_time, update_time, 
+      update_user,sign_id,idelete)
+    values (#{id,jdbcType=BIGINT}, #{companyId,jdbcType=BIGINT}, #{waybillId,jdbcType=BIGINT}, 
+      #{dispatcherId,jdbcType=BIGINT}, #{dipatcherDetailId,jdbcType=BIGINT}, #{storageBatchCode,jdbcType=VARCHAR}, 
+      #{storageDot,jdbcType=INTEGER}, #{storageTime,jdbcType=BIGINT}, #{storageName,jdbcType=VARCHAR}, 
+      #{deliveriesNumber,jdbcType=INTEGER}, #{storageNumber,jdbcType=INTEGER}, #{backType,jdbcType=INTEGER}, 
+      #{backDeliveryType,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, #{backInstructions,jdbcType=VARCHAR}, 
+      #{createUser,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT}, #{updateTime,jdbcType=BIGINT}, 
+      #{updateUser,jdbcType=INTEGER},#{signId,jdbcType=BIGINT},#{idelete,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.BackWarehouseDO" >
+    insert into back_warehouse
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="companyId != null" >
+        company_id,
+      </if>
+      <if test="waybillId != null" >
+        waybill_id,
+      </if>
+      <if test="dispatcherId != null" >
+        dispatcher_id,
+      </if>
+      <if test="dipatcherDetailId != null" >
+        dipatcher_detail_id,
+      </if>
+      <if test="storageBatchCode != null" >
+        storage_batch_code,
+      </if>
+      <if test="storageDot != null" >
+        storage_dot,
+      </if>
+      <if test="storageTime != null" >
+        storage_time,
+      </if>
+      <if test="storageName != null" >
+        storage_name,
+      </if>
+      <if test="deliveriesNumber != null" >
+        deliveries_number,
+      </if>
+      <if test="storageNumber != null" >
+        storage_number,
+      </if>
+      <if test="backType != null" >
+        back_type,
+      </if>
+      <if test="backDeliveryType != null" >
+        back_delivery_type,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="backInstructions != null" >
+        back_instructions,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+       <if test="signId != null" >
+        sign_id,
+      </if>
+      <if test="idelete != null" >
+        idelete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null" >
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="waybillId != null" >
+        #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherId != null" >
+        #{dispatcherId,jdbcType=BIGINT},
+      </if>
+      <if test="dipatcherDetailId != null" >
+        #{dipatcherDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="storageBatchCode != null" >
+        #{storageBatchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="storageDot != null" >
+        #{storageDot,jdbcType=INTEGER},
+      </if>
+      <if test="storageTime != null" >
+        #{storageTime,jdbcType=BIGINT},
+      </if>
+      <if test="storageName != null" >
+        #{storageName,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveriesNumber != null" >
+        #{deliveriesNumber,jdbcType=INTEGER},
+      </if>
+      <if test="storageNumber != null" >
+        #{storageNumber,jdbcType=INTEGER},
+      </if>
+      <if test="backType != null" >
+        #{backType,jdbcType=INTEGER},
+      </if>
+      <if test="backDeliveryType != null" >
+        #{backDeliveryType,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="backInstructions != null" >
+        #{backInstructions,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="signId != null" >
+        #{signId,jdbcType=BIGINT},
+      </if>
+      <if test="idelete != null" >
+        #{idelete,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.BackWarehouseDO" >
+    update back_warehouse
+    <set >
+      <if test="companyId != null" >
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="waybillId != null" >
+        waybill_id = #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherId != null" >
+        dispatcher_id = #{dispatcherId,jdbcType=BIGINT},
+      </if>
+      <if test="dipatcherDetailId != null" >
+        dipatcher_detail_id = #{dipatcherDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="storageBatchCode != null" >
+        storage_batch_code = #{storageBatchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="storageDot != null" >
+        storage_dot = #{storageDot,jdbcType=INTEGER},
+      </if>
+      <if test="storageTime != null" >
+        storage_time = #{storageTime,jdbcType=BIGINT},
+      </if>
+      <if test="storageName != null" >
+        storage_name = #{storageName,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveriesNumber != null" >
+        deliveries_number = #{deliveriesNumber,jdbcType=INTEGER},
+      </if>
+      <if test="storageNumber != null" >
+        storage_number = #{storageNumber,jdbcType=INTEGER},
+      </if>
+      <if test="backType != null" >
+        back_type = #{backType,jdbcType=INTEGER},
+      </if>
+      <if test="backDeliveryType != null" >
+        back_delivery_type = #{backDeliveryType,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="backInstructions != null" >
+        back_instructions = #{backInstructions,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="signId != null" >
+        sign_id = #{signId,jdbcType=BIGINT},
+      </if>
+      <if test="idelete != null" >
+        idelete= #{idelete,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.BackWarehouseDO" >
+    update back_warehouse
+    set company_id = #{companyId,jdbcType=BIGINT},
+      waybill_id = #{waybillId,jdbcType=BIGINT},
+      dispatcher_id = #{dispatcherId,jdbcType=BIGINT},
+      dipatcher_detail_id = #{dipatcherDetailId,jdbcType=BIGINT},
+      storage_batch_code = #{storageBatchCode,jdbcType=VARCHAR},
+      storage_dot = #{storageDot,jdbcType=INTEGER},
+      storage_time = #{storageTime,jdbcType=BIGINT},
+      storage_name = #{storageName,jdbcType=VARCHAR},
+      deliveries_number = #{deliveriesNumber,jdbcType=INTEGER},
+      storage_number = #{storageNumber,jdbcType=INTEGER},
+      back_type = #{backType,jdbcType=INTEGER},
+      back_delivery_type = #{backDeliveryType,jdbcType=INTEGER},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      back_instructions = #{backInstructions,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_time = #{updateTime,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=INTEGER},
+      sign_id = #{signId,jdbcType=BIGINT},
+      idelete = #{idelete,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="deleteByPrimaryKey"  >
+    update back_warehouse
+    set
+      idelete = TRUE
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

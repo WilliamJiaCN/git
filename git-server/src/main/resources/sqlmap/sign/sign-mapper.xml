@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.sign.SignMapper" >
+  <resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.sign.SignDO" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="company_id" property="companyId" jdbcType="BIGINT" />
+    <result column="waybill_id" property="waybillId" jdbcType="BIGINT" />
+    <result column="dispatcher_id" property="dispatcherId" jdbcType="BIGINT" />
+    <result column="dispatcher_detail_id" property="dispatcherDetailId" jdbcType="BIGINT" />
+    <result column="sign_batch_number" property="signBatchNumber" jdbcType="VARCHAR" />
+    <result column="sign_people" property="signPeople" jdbcType="VARCHAR" />
+    <result column="is_receiver" property="isReceiver" jdbcType="BIT" />
+    <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="sign_time" property="signTime" jdbcType="BIGINT" />
+    <result column="sign_type" property="signType" jdbcType="INTEGER" />
+    <result column="normal_sign_type" property="normalSignType" jdbcType="INTEGER" />
+    <result column="signing_instructions" property="signingInstructions" jdbcType="VARCHAR" />
+    <result column="is_back_confirm" property="isBackConfirm" jdbcType="BIT" />
+    <result column="is_sendmsg_receiver" property="isSendmsgReceiver" jdbcType="BIT" />
+    <result column="is_send_msg_invoicer" property="isSendMsgInvoicer" jdbcType="BIT" />
+    <result column="sign_pic" property="signPic" jdbcType="VARCHAR" />
+    <result column="handler" property="handler" jdbcType="INTEGER" />
+    <result column="sign_number" property="signNumber" jdbcType="INTEGER" />
+    <result column="refuse_number" property="refuseNumber" jdbcType="INTEGER" />
+    <result column="unsigned_number" property="unsignedNumber" jdbcType="INTEGER" />
+    <result column="create_number" property="createNumber" jdbcType="INTEGER" />
+    <result column="total_receivable" property="totalReceivable" jdbcType="DECIMAL" />
+    <result column="delivery_failure_reason" property="deliveryFailureReason" jdbcType="VARCHAR" />
+    <result column="is_delivery_failure" property="isDeliveryFailure" jdbcType="BIT" />
+    <result column="is_cashier_confirm" property="isCashierConfirm" jdbcType="BIT" />
+    <result column="delivery_type" property="deliveryType" jdbcType="INTEGER" />
+    <result column="create_user" property="createUser" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    <result column="update_user" property="updateUser" jdbcType="INTEGER" />
+    <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
+    <result column="sign_org_id" property="signOrgId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, company_id, waybill_id, dispatcher_id, dispatcher_detail_id, sign_batch_number, 
+    sign_people, is_receiver, phone_number, id_card, sign_time, sign_type,normal_sign_type, signing_instructions,
+    is_back_confirm, is_sendmsg_receiver, is_send_msg_invoicer, sign_pic, handler, sign_number, 
+    refuse_number, unsigned_number, create_number, total_receivable, delivery_failure_reason, 
+    is_delivery_failure, is_cashier_confirm, delivery_type, create_user, create_time, 
+    update_time, update_user, sign_status,sign_org_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from sign
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sign
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.SignDO" >
+    insert into sign (id, company_id, waybill_id, 
+      dispatcher_id, dispatcher_detail_id, sign_batch_number, 
+      sign_people, is_receiver, phone_number, 
+      id_card, sign_time, sign_type, normal_sign_type,
+      signing_instructions, is_back_confirm, is_sendmsg_receiver, 
+      is_send_msg_invoicer, sign_pic, handler, 
+      sign_number, refuse_number, unsigned_number, 
+      create_number, total_receivable, delivery_failure_reason, 
+      is_delivery_failure, is_cashier_confirm, delivery_type, 
+      create_user, create_time, update_time, 
+      update_user, sign_status,sign_org_id)
+    values (#{id,jdbcType=BIGINT}, #{companyId,jdbcType=BIGINT}, #{waybillId,jdbcType=BIGINT}, 
+      #{dispatcherId,jdbcType=BIGINT}, #{dispatcherDetailId,jdbcType=BIGINT}, #{signBatchNumber,jdbcType=VARCHAR}, 
+      #{signPeople,jdbcType=VARCHAR}, #{isReceiver,jdbcType=BIT}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{idCard,jdbcType=VARCHAR}, #{signTime,jdbcType=BIGINT}, #{signType,jdbcType=INTEGER}, #{normalSignType,jdbcType=INTEGER},
+      #{signingInstructions,jdbcType=VARCHAR}, #{isBackConfirm,jdbcType=BIT}, #{isSendmsgReceiver,jdbcType=BIT}, 
+      #{isSendMsgInvoicer,jdbcType=BIT}, #{signPic,jdbcType=VARCHAR}, #{handler,jdbcType=INTEGER}, 
+      #{signNumber,jdbcType=INTEGER}, #{refuseNumber,jdbcType=INTEGER}, #{unsignedNumber,jdbcType=INTEGER}, 
+      #{createNumber,jdbcType=INTEGER}, #{totalReceivable,jdbcType=DECIMAL}, #{deliveryFailureReason,jdbcType=VARCHAR}, 
+      #{isDeliveryFailure,jdbcType=BIT}, #{isCashierConfirm,jdbcType=BIT}, #{deliveryType,jdbcType=INTEGER}, 
+      #{createUser,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT}, #{updateTime,jdbcType=BIGINT}, 
+      #{updateUser,jdbcType=INTEGER}, #{signStatus,jdbcType=INTEGER},#{signOrgId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.SignDO" >
+    insert into sign
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="companyId != null" >
+        company_id,
+      </if>
+      <if test="waybillId != null" >
+        waybill_id,
+      </if>
+      <if test="dispatcherId != null" >
+        dispatcher_id,
+      </if>
+      <if test="dispatcherDetailId != null" >
+        dispatcher_detail_id,
+      </if>
+      <if test="signBatchNumber != null" >
+        sign_batch_number,
+      </if>
+      <if test="signPeople != null" >
+        sign_people,
+      </if>
+      <if test="isReceiver != null" >
+        is_receiver,
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number,
+      </if>
+      <if test="idCard != null" >
+        id_card,
+      </if>
+      <if test="signTime != null" >
+        sign_time,
+      </if>
+      <if test="signType != null" >
+        sign_type,
+      </if>
+      <if test="normalSignType != null" >
+        normal_sign_type,
+      </if>
+      <if test="signingInstructions != null" >
+        signing_instructions,
+      </if>
+      <if test="isBackConfirm != null" >
+        is_back_confirm,
+      </if>
+      <if test="isSendmsgReceiver != null" >
+        is_sendmsg_receiver,
+      </if>
+      <if test="isSendMsgInvoicer != null" >
+        is_send_msg_invoicer,
+      </if>
+      <if test="signPic != null" >
+        sign_pic,
+      </if>
+      <if test="handler != null" >
+        handler,
+      </if>
+      <if test="signNumber != null" >
+        sign_number,
+      </if>
+      <if test="refuseNumber != null" >
+        refuse_number,
+      </if>
+      <if test="unsignedNumber != null" >
+        unsigned_number,
+      </if>
+      <if test="createNumber != null" >
+        create_number,
+      </if>
+      <if test="totalReceivable != null" >
+        total_receivable,
+      </if>
+      <if test="deliveryFailureReason != null" >
+        delivery_failure_reason,
+      </if>
+      <if test="isDeliveryFailure != null" >
+        is_delivery_failure,
+      </if>
+      <if test="isCashierConfirm != null" >
+        is_cashier_confirm,
+      </if>
+      <if test="deliveryType != null" >
+        delivery_type,
+      </if>
+      <if test="createUser != null" >
+        create_user,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updateUser != null" >
+        update_user,
+      </if>
+      <if test="signStatus != null" >
+        sign_status,
+      </if>
+      <if test="signOrgId != null" >
+        sign_org_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="companyId != null" >
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="waybillId != null" >
+        #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherId != null" >
+        #{dispatcherId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherDetailId != null" >
+        #{dispatcherDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="signBatchNumber != null" >
+        #{signBatchNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="signPeople != null" >
+        #{signPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="isReceiver != null" >
+        #{isReceiver,jdbcType=BIT},
+      </if>
+      <if test="phoneNumber != null" >
+        #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="signTime != null" >
+        #{signTime,jdbcType=BIGINT},
+      </if>
+      <if test="signType != null" >
+        #{signType,jdbcType=INTEGER},
+      </if>
+      <if test="normalSignType != null" >
+        #{normalSignType,jdbcType=INTEGER},
+      </if>
+      <if test="signingInstructions != null" >
+        #{signingInstructions,jdbcType=VARCHAR},
+      </if>
+      <if test="isBackConfirm != null" >
+        #{isBackConfirm,jdbcType=BIT},
+      </if>
+      <if test="isSendmsgReceiver != null" >
+        #{isSendmsgReceiver,jdbcType=BIT},
+      </if>
+      <if test="isSendMsgInvoicer != null" >
+        #{isSendMsgInvoicer,jdbcType=BIT},
+      </if>
+      <if test="signPic != null" >
+        #{signPic,jdbcType=VARCHAR},
+      </if>
+      <if test="handler != null" >
+        #{handler,jdbcType=INTEGER},
+      </if>
+      <if test="signNumber != null" >
+        #{signNumber,jdbcType=INTEGER},
+      </if>
+      <if test="refuseNumber != null" >
+        #{refuseNumber,jdbcType=INTEGER},
+      </if>
+      <if test="unsignedNumber != null" >
+        #{unsignedNumber,jdbcType=INTEGER},
+      </if>
+      <if test="createNumber != null" >
+        #{createNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalReceivable != null" >
+        #{totalReceivable,jdbcType=DECIMAL},
+      </if>
+      <if test="deliveryFailureReason != null" >
+        #{deliveryFailureReason,jdbcType=VARCHAR},
+      </if>
+      <if test="isDeliveryFailure != null" >
+        #{isDeliveryFailure,jdbcType=BIT},
+      </if>
+      <if test="isCashierConfirm != null" >
+        #{isCashierConfirm,jdbcType=BIT},
+      </if>
+      <if test="deliveryType != null" >
+        #{deliveryType,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="signStatus != null" >
+        #{signStatus,jdbcType=INTEGER},
+      </if>
+       <if test="signOrgId != null" >
+        #{signOrgId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.SignDO" >
+    update sign
+    <set >
+      <if test="companyId != null" >
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="waybillId != null" >
+        waybill_id = #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherId != null" >
+        dispatcher_id = #{dispatcherId,jdbcType=BIGINT},
+      </if>
+      <if test="dispatcherDetailId != null" >
+        dispatcher_detail_id = #{dispatcherDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="signBatchNumber != null" >
+        sign_batch_number = #{signBatchNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="signPeople != null" >
+        sign_people = #{signPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="isReceiver != null" >
+        is_receiver = #{isReceiver,jdbcType=BIT},
+      </if>
+      <if test="phoneNumber != null" >
+        phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="signTime != null" >
+        sign_time = #{signTime,jdbcType=BIGINT},
+      </if>
+      <if test="signType != null" >
+        sign_type = #{signType,jdbcType=INTEGER},
+      </if>
+      <if test="normalSignType != null" >
+        normal_sign_type = #{normalSignType,jdbcType=INTEGER},
+      </if>
+      <if test="signingInstructions != null" >
+        signing_instructions = #{signingInstructions,jdbcType=VARCHAR},
+      </if>
+      <if test="isBackConfirm != null" >
+        is_back_confirm = #{isBackConfirm,jdbcType=BIT},
+      </if>
+      <if test="isSendmsgReceiver != null" >
+        is_sendmsg_receiver = #{isSendmsgReceiver,jdbcType=BIT},
+      </if>
+      <if test="isSendMsgInvoicer != null" >
+        is_send_msg_invoicer = #{isSendMsgInvoicer,jdbcType=BIT},
+      </if>
+      <if test="signPic != null" >
+        sign_pic = #{signPic,jdbcType=VARCHAR},
+      </if>
+      <if test="handler != null" >
+        handler = #{handler,jdbcType=INTEGER},
+      </if>
+      <if test="signNumber != null" >
+        sign_number = #{signNumber,jdbcType=INTEGER},
+      </if>
+      <if test="refuseNumber != null" >
+        refuse_number = #{refuseNumber,jdbcType=INTEGER},
+      </if>
+      <if test="unsignedNumber != null" >
+        unsigned_number = #{unsignedNumber,jdbcType=INTEGER},
+      </if>
+      <if test="createNumber != null" >
+        create_number = #{createNumber,jdbcType=INTEGER},
+      </if>
+      <if test="totalReceivable != null" >
+        total_receivable = #{totalReceivable,jdbcType=DECIMAL},
+      </if>
+      <if test="deliveryFailureReason != null" >
+        delivery_failure_reason = #{deliveryFailureReason,jdbcType=VARCHAR},
+      </if>
+      <if test="isDeliveryFailure != null" >
+        is_delivery_failure = #{isDeliveryFailure,jdbcType=BIT},
+      </if>
+      <if test="isCashierConfirm != null" >
+        is_cashier_confirm = #{isCashierConfirm,jdbcType=BIT},
+      </if>
+      <if test="deliveryType != null" >
+        delivery_type = #{deliveryType,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null" >
+        create_user = #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null" >
+        update_user = #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="signStatus != null" >
+        sign_status = #{signStatus,jdbcType=INTEGER},
+      </if>
+      <if test="signOrgId != null" >
+        sign_org_id = #{signOrgId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.SignDO" >
+    update sign
+    set company_id = #{companyId,jdbcType=BIGINT},
+      waybill_id = #{waybillId,jdbcType=BIGINT},
+      dispatcher_id = #{dispatcherId,jdbcType=BIGINT},
+      dispatcher_detail_id = #{dispatcherDetailId,jdbcType=BIGINT},
+      sign_batch_number = #{signBatchNumber,jdbcType=VARCHAR},
+      sign_people = #{signPeople,jdbcType=VARCHAR},
+      is_receiver = #{isReceiver,jdbcType=BIT},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      sign_time = #{signTime,jdbcType=BIGINT},
+      sign_type = #{signType,jdbcType=INTEGER},
+      normal_sign_type = #{normalSignType,jdbcType=INTEGER},
+      signing_instructions = #{signingInstructions,jdbcType=VARCHAR},
+      is_back_confirm = #{isBackConfirm,jdbcType=BIT},
+      is_sendmsg_receiver = #{isSendmsgReceiver,jdbcType=BIT},
+      is_send_msg_invoicer = #{isSendMsgInvoicer,jdbcType=BIT},
+      sign_pic = #{signPic,jdbcType=VARCHAR},
+      handler = #{handler,jdbcType=INTEGER},
+      sign_number = #{signNumber,jdbcType=INTEGER},
+      refuse_number = #{refuseNumber,jdbcType=INTEGER},
+      unsigned_number = #{unsignedNumber,jdbcType=INTEGER},
+      create_number = #{createNumber,jdbcType=INTEGER},
+      total_receivable = #{totalReceivable,jdbcType=DECIMAL},
+      delivery_failure_reason = #{deliveryFailureReason,jdbcType=VARCHAR},
+      is_delivery_failure = #{isDeliveryFailure,jdbcType=BIT},
+      is_cashier_confirm = #{isCashierConfirm,jdbcType=BIT},
+      delivery_type = #{deliveryType,jdbcType=INTEGER},
+      create_user = #{createUser,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_time = #{updateTime,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=INTEGER},
+      sign_status = #{signStatus,jdbcType=INTEGER}
+      sign_org_id = #{signOrgId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <delete id="deleteBatcheByPrimaryKey" parameterType="java.util.List">
+  	delete from sign where sign.id in 
+  	<foreach collection="list" item="item" separator="," open="(" close=")">
+  		 #{item,jdbcType=BIGINT}
+  	</foreach>
+  </delete>
+  
+  <insert id="insertBatch" parameterType="java.util.List">
+   insert into sign (id, company_id, waybill_id, 
+      dispatcher_id, dispatcher_detail_id, sign_batch_number, 
+      sign_people, is_receiver, phone_number, 
+      id_card, sign_time, sign_type, normal_sign_type,
+      signing_instructions, is_back_confirm, is_sendmsg_receiver, 
+      is_send_msg_invoicer, sign_pic, handler, 
+      sign_number, refuse_number, unsigned_number, 
+      create_number, total_receivable, delivery_failure_reason, 
+      is_delivery_failure, is_cashier_confirm, delivery_type, 
+      create_user, create_time, update_time, 
+      update_user, sign_status,sign_org_id)
+    values 
+    	<foreach collection="list" item="item" separator=",">
+    		(#{item.id,jdbcType=BIGINT}, #{item.companyId,jdbcType=BIGINT}, #{item.waybillId,jdbcType=BIGINT}, 
+		      #{item.dispatcherId,jdbcType=BIGINT}, #{item.dispatcherDetailId,jdbcType=BIGINT}, #{item.signBatchNumber,jdbcType=VARCHAR}, 
+		      #{item.signPeople,jdbcType=VARCHAR}, #{item.isReceiver,jdbcType=BIT}, #{item.phoneNumber,jdbcType=VARCHAR}, 
+		      #{item.idCard,jdbcType=VARCHAR}, #{item.signTime,jdbcType=BIGINT}, #{item.signType,jdbcType=INTEGER}, #{item.normalSignType,jdbcType=INTEGER},
+		      #{item.signingInstructions,jdbcType=VARCHAR}, #{item.isBackConfirm,jdbcType=BIT}, #{item.isSendmsgReceiver,jdbcType=BIT}, 
+		      #{item.isSendMsgInvoicer,jdbcType=BIT}, #{item.signPic,jdbcType=VARCHAR}, #{item.handler,jdbcType=INTEGER}, 
+		      #{item.signNumber,jdbcType=INTEGER}, #{item.refuseNumber,jdbcType=INTEGER}, #{item.unsignedNumber,jdbcType=INTEGER}, 
+		      #{item.createNumber,jdbcType=INTEGER}, #{item.totalReceivable,jdbcType=DECIMAL}, #{item.deliveryFailureReason,jdbcType=VARCHAR}, 
+		      #{item.isDeliveryFailure,jdbcType=BIT}, #{item.isCashierConfirm,jdbcType=BIT}, #{item.deliveryType,jdbcType=INTEGER}, 
+		      #{item.createUser,jdbcType=INTEGER}, #{item.createTime,jdbcType=BIGINT}, #{item.updateTime,jdbcType=BIGINT}, 
+		      #{item.updateUser,jdbcType=INTEGER}, #{item.signStatus,jdbcType=INTEGER},#{item.signOrgId,jdbcType=INTEGER})
+    	</foreach>
+  </insert>
+  
+  <update id="updateStatusBatchById">
+  	update sign set sign_status = #{status,jdbcType=INTEGER} where id in
+  	(<foreach collection="list" item="item" separator=",">
+  		id=#{item}
+  	</foreach>)
+  
+  </update>
+   <update id="updateBatchSignByPrimaryKey">
+      update sign set
+     sign_status=#{record.signStatus,jdbcType=INTEGER},
+      update_user=#{record.updateUser,jdbcType=INTEGER},
+      update_time=#{record.updateTime,jdbcType=BIGINT}
+    where id in
+    (<foreach collection="list" item="item" separator=",">
+    	#{item,jdbcType=BIGINT}
+    </foreach>)
+  </update>
+
+  <update id="updateBatchSignCashierConfirmation">
+    update sign set
+    sign_status=#{record.signStatus,jdbcType=INTEGER},
+    update_user=#{record.updateUser,jdbcType=INTEGER},
+    update_time=#{record.updateTime,jdbcType=BIGINT},
+    is_cashier_confirm=#{record.isCashierConfirm,jdbcType=BIT}
+    where id in
+    (<foreach collection="list" item="item" separator=",">
+    #{item,jdbcType=BIGINT}
+  </foreach>)
+  </update>
+
+  <select id="queryDistinctWaybillId" resultType="java.lang.Long" parameterType="com.hivescm.tms.finance.server.dao.query.SignWaybillDBQueryDTO" >
+    SELECT  temp.waybill_id
+    FROM
+    (select DISTINCT waybill_id
+    from sign
+    where sign_status != 4
+    <if test="companyId != null" >
+      AND company_id = #{companyId,jdbcType=BIGINT}
+    </if>
+    <if test="signBatchNumber != null" >
+      AND  sign_batch_number =#{signBatchNumber,jdbcType=VARCHAR}
+    </if>
+    <if test="waybillId != null" >
+      AND  waybill_id =#{waybillId,jdbcType=BIGINT}
+    </if>
+    <if test="startTime != null" >
+      AND  sign_time &gt; #{startTime,jdbcType=BIGINT}
+    </if>
+    <if test="endTime != null" >
+      AND  sign_time &lt; #{endTime,jdbcType=BIGINT}
+    </if>
+    <if test="signType != null" >
+      AND  sign_type =#{signType,jdbcType=INTEGER}
+    </if>
+    ORDER BY sign_time DESC ) AS temp limit #{currIndex,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+  </select>
+  <select id="countDistinctWaybillNum" resultType="java.lang.Long" parameterType="com.hivescm.tms.finance.server.dao.query.SignWaybillDBQueryDTO" >
+    SELECT  COUNT(DISTINCT waybill_id)
+    from sign
+    where sign_status != 4
+    <if test="companyId != null" >
+      AND company_id = #{companyId,jdbcType=BIGINT}
+    </if>
+    <if test="signBatchNumber != null" >
+      AND  sign_batch_number =#{signBatchNumber,jdbcType=VARCHAR}
+    </if>
+    <if test="waybillId != null" >
+      AND  waybill_id =#{waybillId,jdbcType=BIGINT}
+    </if>
+    <if test="startTime != null" >
+      AND  sign_time &gt; #{startTime,jdbcType=BIGINT}
+    </if>
+    <if test="endTime != null" >
+      AND  sign_time &lt; #{endTime,jdbcType=BIGINT}
+    </if>
+    <if test="signType != null" >
+      AND  sign_type =#{signType,jdbcType=INTEGER}
+    </if>
+  </select>
+</mapper>

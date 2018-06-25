@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.sign.GoodsDetailsDOMapper">
+	<resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.sign.GoodsDetailsDO">
+		<id column="id" jdbcType="BIGINT" property="id" />
+		<result column="waybill_id" jdbcType="BIGINT" property="waybillId" />
+		<result column="refuse_id" jdbcType="BIGINT" property="refuseId" />
+		<result column="goods_type" jdbcType="INTEGER" property="goodsType" />
+		<result column="dispacher_num" jdbcType="INTEGER" property="dispacherNum" />
+		<result column="sign_num" jdbcType="INTEGER" property="signNum" />
+		<result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+		<result column="waybill_goods_id" jdbcType="BIGINT" property="waybillGoodsId" />
+		<result column="packages" jdbcType="VARCHAR" property="packages" />
+		<result column="box_num" jdbcType="VARCHAR" property="boxNum" />
+		<result column="create_num" jdbcType="INTEGER" property="createNum" />
+		<result column="refuse_num" jdbcType="INTEGER" property="refuseNum" />
+		<result column="refuse_cause" jdbcType="VARCHAR" property="refuseCause" />
+		<result column="refuse_weight" jdbcType="DECIMAL" property="refuseWeight" />
+		<result column="refuse_volume" jdbcType="DECIMAL" property="refuseVolume" />
+		<result column="company_id" jdbcType="BIGINT" property="companyId" />
+		<result column="create_user" jdbcType="INTEGER" property="createUser" />
+		<result column="create_time" jdbcType="BIGINT" property="createTime" />
+		<result column="update_user" jdbcType="INTEGER" property="updateUser" />
+		<result column="update_time" jdbcType="BIGINT" property="updateTime" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		id, waybill_id, refuse_id, goods_type, dispacher_num, sign_num, goods_name, waybill_goods_id,
+		packages, box_num, create_num, refuse_num, refuse_cause, refuse_weight, refuse_volume,
+		company_id, create_user, create_time, update_user, update_time
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from goods_details
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from goods_details
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+	<delete id="deleteByRefuseId">
+		delete from goods_details
+		where refuse_id =
+		#{refuseId,jdbcType=BIGINT}
+	</delete>
+	<insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.GoodsDetailsDO">
+		insert into goods_details (id, waybill_id, refuse_id,
+		goods_type, dispacher_num, sign_num,
+		goods_name, waybill_goods_id, packages,
+		box_num, create_num, refuse_num,
+		refuse_cause, refuse_weight, refuse_volume,
+		company_id, create_user, create_time,
+		update_user, update_time)
+		values (#{id,jdbcType=BIGINT}, #{waybillId,jdbcType=BIGINT}, #{refuseId,jdbcType=BIGINT},
+		#{goodsType,jdbcType=INTEGER}, #{dispacherNum,jdbcType=INTEGER}, #{signNum,jdbcType=INTEGER},
+		#{goodsName,jdbcType=VARCHAR}, #{waybillGoodsId,jdbcType=BIGINT}, #{packages,jdbcType=VARCHAR},
+		#{boxNum,jdbcType=VARCHAR}, #{createNum,jdbcType=INTEGER}, #{refuseNum,jdbcType=INTEGER},
+		#{refuseCause,jdbcType=VARCHAR}, #{refuseWeight,jdbcType=DECIMAL}, #{refuseVolume,jdbcType=DECIMAL},
+		#{companyId,jdbcType=BIGINT}, #{createUser,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT},
+		#{updateUser,jdbcType=INTEGER}, #{updateTime,jdbcType=BIGINT})
+	</insert>
+	<insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.GoodsDetailsDO">
+		insert into goods_details
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="waybillId != null">
+				waybill_id,
+			</if>
+			<if test="refuseId != null">
+				refuse_id,
+			</if>
+			<if test="goodsType != null">
+				goods_type,
+			</if>
+			<if test="dispacherNum != null">
+				dispacher_num,
+			</if>
+			<if test="signNum != null">
+				sign_num,
+			</if>
+			<if test="goodsName != null">
+				goods_name,
+			</if>
+			<if test="waybillGoodsId != null">
+				waybill_goods_id,
+			</if>
+			<if test="packages != null">
+				packages,
+			</if>
+			<if test="boxNum != null">
+				box_num,
+			</if>
+			<if test="createNum != null">
+				create_num,
+			</if>
+			<if test="refuseNum != null">
+				refuse_num,
+			</if>
+			<if test="refuseCause != null">
+				refuse_cause,
+			</if>
+			<if test="refuseWeight != null">
+				refuse_weight,
+			</if>
+			<if test="refuseVolume != null">
+				refuse_volume,
+			</if>
+			<if test="companyId != null">
+				company_id,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updateUser != null">
+				update_user,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="waybillId != null">
+				#{waybillId,jdbcType=BIGINT},
+			</if>
+			<if test="refuseId != null">
+				#{refuseId,jdbcType=BIGINT},
+			</if>
+			<if test="goodsType != null">
+				#{goodsType,jdbcType=INTEGER},
+			</if>
+			<if test="dispacherNum != null">
+				#{dispacherNum,jdbcType=INTEGER},
+			</if>
+			<if test="signNum != null">
+				#{signNum,jdbcType=INTEGER},
+			</if>
+			<if test="goodsName != null">
+				#{goodsName,jdbcType=VARCHAR},
+			</if>
+			<if test="waybillGoodsId != null">
+				#{waybillGoodsId,jdbcType=BIGINT},
+			</if>
+			<if test="packages != null">
+				#{packages,jdbcType=VARCHAR},
+			</if>
+			<if test="boxNum != null">
+				#{boxNum,jdbcType=VARCHAR},
+			</if>
+			<if test="createNum != null">
+				#{createNum,jdbcType=INTEGER},
+			</if>
+			<if test="refuseNum != null">
+				#{refuseNum,jdbcType=INTEGER},
+			</if>
+			<if test="refuseCause != null">
+				#{refuseCause,jdbcType=VARCHAR},
+			</if>
+			<if test="refuseWeight != null">
+				#{refuseWeight,jdbcType=DECIMAL},
+			</if>
+			<if test="refuseVolume != null">
+				#{refuseVolume,jdbcType=DECIMAL},
+			</if>
+			<if test="companyId != null">
+				#{companyId,jdbcType=BIGINT},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=BIGINT},
+			</if>
+			<if test="updateUser != null">
+				#{updateUser,jdbcType=INTEGER},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime,jdbcType=BIGINT},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByExampleSelective" parameterType="map">
+		update goods_details
+		<set>
+			<if test="record.id != null">
+				id = #{record.id,jdbcType=BIGINT},
+			</if>
+			<if test="record.waybillId != null">
+				waybill_id = #{record.waybillId,jdbcType=BIGINT},
+			</if>
+			<if test="record.refuseId != null">
+				refuse_id = #{record.refuseId,jdbcType=BIGINT},
+			</if>
+			<if test="record.goodsType != null">
+				goods_type = #{record.goodsType,jdbcType=INTEGER},
+			</if>
+			<if test="record.dispacherNum != null">
+				dispacher_num = #{record.dispacherNum,jdbcType=INTEGER},
+			</if>
+			<if test="record.signNum != null">
+				sign_num = #{record.signNum,jdbcType=INTEGER},
+			</if>
+			<if test="record.goodsName != null">
+				goods_name = #{record.goodsName,jdbcType=VARCHAR},
+			</if>
+			<if test="record.waybillGoodsId != null">
+				waybill_goods_id = #{record.waybillGoodsId,jdbcType=BIGINT},
+			</if>
+			<if test="record.packages != null">
+				packages = #{record.packages,jdbcType=VARCHAR},
+			</if>
+			<if test="record.boxNum != null">
+				box_num = #{record.boxNum,jdbcType=VARCHAR},
+			</if>
+			<if test="record.createNum != null">
+				create_num = #{record.createNum,jdbcType=INTEGER},
+			</if>
+			<if test="record.refuseNum != null">
+				refuse_num = #{record.refuseNum,jdbcType=INTEGER},
+			</if>
+			<if test="record.refuseCause != null">
+				refuse_cause = #{record.refuseCause,jdbcType=VARCHAR},
+			</if>
+			<if test="record.refuseWeight != null">
+				refuse_weight = #{record.refuseWeight,jdbcType=DECIMAL},
+			</if>
+			<if test="record.refuseVolume != null">
+				refuse_volume = #{record.refuseVolume,jdbcType=DECIMAL},
+			</if>
+			<if test="record.companyId != null">
+				company_id = #{record.companyId,jdbcType=BIGINT},
+			</if>
+			<if test="record.createUser != null">
+				create_user = #{record.createUser,jdbcType=INTEGER},
+			</if>
+			<if test="record.createTime != null">
+				create_time = #{record.createTime,jdbcType=BIGINT},
+			</if>
+			<if test="record.updateUser != null">
+				update_user = #{record.updateUser,jdbcType=INTEGER},
+			</if>
+			<if test="record.updateTime != null">
+				update_time = #{record.updateTime,jdbcType=BIGINT},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.GoodsDetailsDO">
+		update goods_details
+		<set>
+			<if test="waybillId != null">
+				waybill_id = #{waybillId,jdbcType=BIGINT},
+			</if>
+			<if test="refuseId != null">
+				refuse_id = #{refuseId,jdbcType=BIGINT},
+			</if>
+			<if test="goodsType != null">
+				goods_type = #{goodsType,jdbcType=INTEGER},
+			</if>
+			<if test="dispacherNum != null">
+				dispacher_num = #{dispacherNum,jdbcType=INTEGER},
+			</if>
+			<if test="signNum != null">
+				sign_num = #{signNum,jdbcType=INTEGER},
+			</if>
+			<if test="goodsName != null">
+				goods_name = #{goodsName,jdbcType=VARCHAR},
+			</if>
+			<if test="waybillGoodsId != null">
+				waybill_goods_id = #{waybillGoodsId,jdbcType=BIGINT},
+			</if>
+			<if test="packages != null">
+				packages = #{packages,jdbcType=VARCHAR},
+			</if>
+			<if test="boxNum != null">
+				box_num = #{boxNum,jdbcType=VARCHAR},
+			</if>
+			<if test="createNum != null">
+				create_num = #{createNum,jdbcType=INTEGER},
+			</if>
+			<if test="refuseNum != null">
+				refuse_num = #{refuseNum,jdbcType=INTEGER},
+			</if>
+			<if test="refuseCause != null">
+				refuse_cause = #{refuseCause,jdbcType=VARCHAR},
+			</if>
+			<if test="refuseWeight != null">
+				refuse_weight = #{refuseWeight,jdbcType=DECIMAL},
+			</if>
+			<if test="refuseVolume != null">
+				refuse_volume = #{refuseVolume,jdbcType=DECIMAL},
+			</if>
+			<if test="companyId != null">
+				company_id = #{companyId,jdbcType=BIGINT},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=BIGINT},
+			</if>
+			<if test="updateUser != null">
+				update_user = #{updateUser,jdbcType=INTEGER},
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime,jdbcType=BIGINT},
+			</if>
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.hivescm.tms.finance.server.dao.entity.sign.GoodsDetailsDO">
+		update goods_details
+		set waybill_id = #{waybillId,jdbcType=BIGINT},
+		refuse_id = #{refuseId,jdbcType=BIGINT},
+		goods_type = #{goodsType,jdbcType=INTEGER},
+		dispacher_num = #{dispacherNum,jdbcType=INTEGER},
+		sign_num = #{signNum,jdbcType=INTEGER},
+		goods_name = #{goodsName,jdbcType=VARCHAR},
+		waybill_goods_id = #{waybillGoodsId,jdbcType=BIGINT},
+		packages = #{packages,jdbcType=VARCHAR},
+		box_num = #{boxNum,jdbcType=VARCHAR},
+		create_num = #{createNum,jdbcType=INTEGER},
+		refuse_num = #{refuseNum,jdbcType=INTEGER},
+		refuse_cause = #{refuseCause,jdbcType=VARCHAR},
+		refuse_weight = #{refuseWeight,jdbcType=DECIMAL},
+		refuse_volume = #{refuseVolume,jdbcType=DECIMAL},
+		company_id = #{companyId,jdbcType=BIGINT},
+		create_user = #{createUser,jdbcType=INTEGER},
+		create_time = #{createTime,jdbcType=BIGINT},
+		update_user = #{updateUser,jdbcType=INTEGER},
+		update_time = #{updateTime,jdbcType=BIGINT}
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	<!--自定义sql -->
+	<insert id="insertBatch" parameterType="java.util.List">
+		insert into goods_details (id, waybill_id, refuse_id, goods_type,
+		dispacher_num, sign_num, goods_name,
+		waybill_goods_id, packages, box_num, create_num, refuse_num, refuse_cause,
+		refuse_weight,
+		refuse_volume, company_id, create_user, create_time, update_user, update_time)
+		values
+		<foreach collection="list" item="item" separator=",">
+			(#{item.id,jdbcType=BIGINT},#{item.waybillId,jdbcType=BIGINT},
+			#{item.refuseId,jdbcType=BIGINT},
+			#{item.goodsType,jdbcType=INTEGER},
+			#{item.dispacherNum,jdbcType=INTEGER},
+			#{item.signNum,jdbcType=INTEGER}, #{item.goodsName,jdbcType=VARCHAR},
+			#{item.waybillGoodsId,jdbcType=BIGINT},
+			#{item.packages,jdbcType=VARCHAR},
+			#{item.boxNum,jdbcType=VARCHAR}, #{item.createNum,jdbcType=INTEGER},
+			#{item.refuseNum,jdbcType=INTEGER},
+			#{item.refuseCause,jdbcType=VARCHAR},
+			#{item.refuseWeight,jdbcType=DECIMAL},
+			#{item.refuseVolume,jdbcType=DECIMAL},
+			#{item.companyId,jdbcType=BIGINT},
+			#{item.createUser,jdbcType=INTEGER},
+			#{item.createTime,jdbcType=BIGINT},
+			#{item.updateUser,jdbcType=INTEGER},
+			#{item.updateTime,jdbcType=BIGINT})
+		</foreach>
+	</insert>
+</mapper>
