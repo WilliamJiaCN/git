@@ -123,15 +123,10 @@
 	</build>
 
 	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>Packaging TMS Common package Release Repository</name>
-			<url>http://nexus.hivescm.com:8081/nexus/content/repositories/releases/</url>
-		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<name>Packaging TMS Common package Snapshot Repository</name>
-			<url>http://nexus.hivescm.com:8081/nexus/content/repositories/snapshots/</url>
+			<name>Packaging Architect Common package Snapshot Repository</name>
+			<url>http://60.205.212.141:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
