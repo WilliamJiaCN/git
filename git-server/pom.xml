@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>git-server</artifactId>
+	<packaging>jar</packaging>
+	<version>2.0.0-SNAPSHOT</version>
+	<parent>
+		<groupId>com.architect</groupId>
+		<artifactId>git</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
+		<relativePath /> 
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>com.hivescm</groupId>
+			<artifactId>framework-elasticsearch</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hivescm</groupId>
+			<artifactId>framework-logger-api</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency> 
+		<dependency>
+			<groupId>com.hivescm</groupId>
+			<artifactId>framework-extesion</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hivescm</groupId>
+  			<artifactId>tms-intranet-gateway-api</artifactId>
+  			<version>2.0.0-SNAPSHOT</version>
+		</dependency>
+		<!-- 框架 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-stream</artifactId>
+			<version>1.2.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<version>1.2.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-hystrix</artifactId>
+		    <version>1.2.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 依赖组件 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-commons</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<artifactId>elastic-job-common-core</artifactId>
+			<groupId>com.dangdang</groupId>
+			<version>2.1.5</version>
+		</dependency>
+		<dependency>
+			<artifactId>elastic-job-lite-core</artifactId>
+			<groupId>com.dangdang</groupId>
+			<version>2.1.5</version>
+		</dependency>
+		<dependency>
+			<artifactId>elastic-job-lite-spring</artifactId>
+			<groupId>com.dangdang</groupId>
+			<version>2.1.5</version>
+		</dependency>
+		<dependency>
+			<artifactId>elastic-job-cloud-executor</artifactId>
+			<groupId>com.dangdang</groupId>
+			<version>2.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm-util</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.2.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.architect</groupId>
+			<artifactId>git-api</artifactId>
+			<version>2.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hivescm.tms</groupId>
+			<artifactId>imock-hive</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api-scala_2.11</artifactId>
+		</dependency>
+		<!-- 健康检查 -->
+		<dependency>
+               <groupId>com.hivescm</groupId>
+               <artifactId>health-indicators-monitor</artifactId>
+               <version>1.1-SNAPSHOT</version>
+         </dependency>
+         <dependency>
+              <groupId>org.jolokia</groupId>
+              <artifactId>jolokia-core</artifactId>
+        </dependency>
+        <dependency>
+               <groupId>de.codecentric</groupId>
+               <artifactId>spring-boot-admin-starter-client</artifactId>
+               <version>1.5.5</version>
+        </dependency>
+		<dependency>
+			<groupId>com.hivescm</groupId>
+			<artifactId>billing-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+	<profiles>
+		<!-- 本地环境 -->
+		<profile>
+			<id>local</id>
+			<properties>
+				<profileActive>local</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<!-- 开发环境 -->
+		<profile>
+			<id>dev</id>
+			<properties>
+				<profileActive>dev</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<configuration>
+									<tasks>
+										<copy todir="${basedir}/target/classes/" overwrite="true">
+											<fileset dir="${basedir}/src/main/resources/dev/" />
+										</copy>
+										<delete dir="${basedir}/target/classes/product/"></delete>
+										<delete dir="${basedir}/target/classes/test/"></delete>
+										<delete dir="${basedir}/target/classes/dev/"></delete>
+										<delete dir="${basedir}/target/classes/doc/"></delete>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>pl.project13.maven</groupId>
+						<artifactId>git-commit-id-plugin</artifactId>
+						<version>2.2.2</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>revision</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<!--日期格式;默认值:dd.MM.yyyy '@' HH:mm:ss z;-->
+							<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+							<!--,构建过程中,是否打印详细信息;默认值:false;-->
+							<verbose>true</verbose>
+							<!-- ".git"文件路径;默认值:${project.basedir}/.git; -->
+							<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
+							<generateGitPropertiesFile>true</generateGitPropertiesFile>
+							<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+							<!--若项目打包类型为pom,是否取消构建;默认值:true;-->
+							<skipPoms>true</skipPoms>
+							<!--".git"文件夹未找到时,构建是否失败;若设置true,则构建失败;若设置false,则跳过执行该目标;默认值:true;-->
+							<failOnNoGitDirectory>true</failOnNoGitDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<!-- 测试环境 -->
+		<profile>
+			<id>test</id>
+			<properties>
+				<profileActive>test</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<configuration>
+									<tasks>
+										<copy todir="${basedir}/target/classes/" overwrite="true">
+											<fileset dir="${basedir}/src/main/resources/test/" />
+										</copy>
+										<delete dir="${basedir}/target/classes/product/"></delete>
+										<delete dir="${basedir}/target/classes/test/"></delete>
+										<delete dir="${basedir}/target/classes/dev/"></delete>
+										<delete dir="${basedir}/target/classes/doc/"></delete>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>pl.project13.maven</groupId>
+						<artifactId>git-commit-id-plugin</artifactId>
+						<version>2.2.2</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>revision</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<!--日期格式;默认值:dd.MM.yyyy '@' HH:mm:ss z;-->
+							<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+							<!--,构建过程中,是否打印详细信息;默认值:false;-->
+							<verbose>true</verbose>
+							<!-- ".git"文件路径;默认值:${project.basedir}/.git; -->
+							<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
+							<generateGitPropertiesFile>true</generateGitPropertiesFile>
+							<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+							<!--若项目打包类型为pom,是否取消构建;默认值:true;-->
+							<skipPoms>true</skipPoms>
+							<!--".git"文件夹未找到时,构建是否失败;若设置true,则构建失败;若设置false,则跳过执行该目标;默认值:true;-->
+							<failOnNoGitDirectory>true</failOnNoGitDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<!-- 生产环境 -->
+		<profile>
+			<id>product</id>
+			<properties>
+				<profileActive>product</profileActive>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<configuration>
+									<tasks>
+										<copy todir="${basedir}/target/classes/" overwrite="true">
+											<fileset dir="${basedir}/src/main/resources/product/" />
+										</copy>
+										<delete dir="${basedir}/target/classes/product/"></delete>
+										<delete dir="${basedir}/target/classes/test/"></delete>
+										<delete dir="${basedir}/target/classes/dev/"></delete>
+										<delete dir="${basedir}/target/classes/doc/"></delete>
+										<delete file="${basedir}/target/classes/com/hivescm/tms/server/startup/Swagger2.class" />
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>pl.project13.maven</groupId>
+						<artifactId>git-commit-id-plugin</artifactId>
+						<version>2.2.2</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>revision</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<!--日期格式;默认值:dd.MM.yyyy '@' HH:mm:ss z;-->
+							<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+							<!--,构建过程中,是否打印详细信息;默认值:false;-->
+							<verbose>true</verbose>
+							<!-- ".git"文件路径;默认值:${project.basedir}/.git; -->
+							<dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
+							<generateGitPropertiesFile>true</generateGitPropertiesFile>
+							<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+							<!--若项目打包类型为pom,是否取消构建;默认值:true;-->
+							<skipPoms>true</skipPoms>
+							<!--".git"文件夹未找到时,构建是否失败;若设置true,则构建失败;若设置false,则跳过执行该目标;默认值:true;-->
+							<failOnNoGitDirectory>true</failOnNoGitDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<!-- 文档服务 -->
+		<profile>
+			<id>doc</id>
+			<properties>
+				<profileActive>doc</profileActive>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<configuration>
+									<tasks>
+										<copy todir="${basedir}/target/classes/" overwrite="true">
+											<fileset dir="${basedir}/src/main/resources/doc/" />
+										</copy>
+										<delete dir="${basedir}/target/classes/product/"></delete>
+										<delete dir="${basedir}/target/classes/test/"></delete>
+										<delete dir="${basedir}/target/classes/dev/"></delete>
+										<delete dir="${basedir}/target/classes/doc/"></delete>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-antrun-plugin
+										</artifactId>
+										<versionRange>
+											[1.8,)
+										</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

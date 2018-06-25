@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.finance.FinanceManageCashSerialMapper">
+    <resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="finance_id" jdbcType="BIGINT" property="financeId"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="company_id" jdbcType="BIGINT" property="companyId"/>
+        <result column="ordersource_id" jdbcType="VARCHAR" property="ordersourceId"/>
+        <result column="cod_type" jdbcType="INTEGER" property="codType"/>
+        <result column="fee_type" jdbcType="VARCHAR" property="feeType"/>
+        <result column="fund_account" jdbcType="VARCHAR" property="fundAccount"/>
+        <result column="receipt_amount" jdbcType="DECIMAL" property="receiptAmount"/>
+        <result column="pay_amount" jdbcType="DECIMAL" property="payAmount"/>
+        <result column="surplus" jdbcType="DECIMAL" property="surplus"/>
+        <result column="receipt_pay_network_id" jdbcType="INTEGER" property="receiptPayNetworkId"/>
+        <result column="settle_network_id" jdbcType="INTEGER" property="settleNetworkId"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="service_charge" jdbcType="DECIMAL" property="serviceCharge"/>
+        <result column="payment_type" jdbcType="INTEGER" property="paymentType"/>
+        <result column="settlement_method" jdbcType="INTEGER" property="settlementMethod"/>
+        <result column="pay_method" jdbcType="INTEGER" property="payMethod"/>
+        <result column="receipt_code" jdbcType="VARCHAR" property="receiptCode"/>
+        <result column="pay_code" jdbcType="VARCHAR" property="payCode"/>
+        <result column="submit_bill_id" jdbcType="BIGINT" property="submitBillId"/>
+        <result column="submit_bill_code" jdbcType="VARCHAR" property="submitBillCode"/>
+        <result column="submit_bill_state" jdbcType="INTEGER" property="submitBillState"/>
+        <result column="create_bill_time" jdbcType="BIGINT" property="createBillTime"/>
+        <result column="submit_bill_time" jdbcType="BIGINT" property="submitBillTime"/>
+        <result column="receipt_pay_time" jdbcType="BIGINT" property="receiptPayTime"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="create_user_id" jdbcType="INTEGER" property="createUserId"/>
+        <result column="create_time" jdbcType="BIGINT" property="createTime"/>
+        <result column="update_user_id" jdbcType="INTEGER" property="updateUserId"/>
+        <result column="update_time" jdbcType="BIGINT" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, finance_id, type, company_id, ordersource_id, cod_type, fee_type, fund_account, 
+    receipt_amount, pay_amount, surplus, receipt_pay_network_id, settle_network_id, remark, 
+    service_charge, payment_type, settlement_method, pay_method, receipt_code, pay_code, submit_bill_id,
+    submit_bill_code, submit_bill_state, create_bill_time, submit_bill_time, receipt_pay_time, 
+    status, create_user_id, create_time, update_user_id, update_time
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from finance_manage_cash_serial
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey">
+    delete from finance_manage_cash_serial
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    insert into finance_manage_cash_serial (id, finance_id, type, 
+      company_id, ordersource_id, cod_type, 
+      fee_type, fund_account, receipt_amount, 
+      pay_amount, surplus, receipt_pay_network_id, 
+      settle_network_id, remark, service_charge, 
+      payment_type, settlement_method, pay_method, 
+      receipt_code, pay_code,submit_bill_code, submit_bill_id,
+      submit_bill_state, create_bill_time, submit_bill_time, 
+      receipt_pay_time, status, create_user_id, 
+      create_time, update_user_id, update_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{financeId,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, 
+      #{companyId,jdbcType=BIGINT}, #{ordersourceId,jdbcType=VARCHAR}, #{codType,jdbcType=INTEGER}, 
+      #{feeType,jdbcType=INTEGER}, #{fundAccount,jdbcType=VARCHAR}, #{receiptAmount,jdbcType=DECIMAL}, 
+      #{payAmount,jdbcType=DECIMAL}, #{surplus,jdbcType=DECIMAL}, #{receiptPayNetworkId,jdbcType=INTEGER}, 
+      #{settleNetworkId,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{serviceCharge,jdbcType=DECIMAL}, 
+      #{paymentType,jdbcType=INTEGER}, #{settlementMethod,jdbcType=INTEGER}, #{payMethod,jdbcType=INTEGER}, 
+      #{receiptCode,jdbcType=VARCHAR}, #{payCode,jdbcType=VARCHAR}, #{submitBillCode,jdbcType=VARCHAR}, #{submitBillId,jdbcType=BIGINT}, 
+      #{submitBillState,jdbcType=INTEGER}, #{createBillTime,jdbcType=BIGINT}, #{submitBillTime,jdbcType=BIGINT}, 
+      #{receiptPayTime,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{createUserId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=BIGINT}, #{updateUserId,jdbcType=INTEGER}, #{updateTime,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertBatch" parameterType="java.util.List">
+    insert into finance_manage_cash_serial (id, finance_id, type,
+      company_id, ordersource_id, cod_type,
+      fee_type, fund_account, receipt_amount,
+      pay_amount, surplus, receipt_pay_network_id,
+      settle_network_id, remark, service_charge,
+      payment_type, settlement_method, pay_method,
+      receipt_code, pay_code,submit_bill_code, submit_bill_id,
+      submit_bill_state, create_bill_time, submit_bill_time,
+      receipt_pay_time, status, create_user_id,
+      create_time, update_user_id, update_time
+      )
+    values
+    <foreach collection="list" item="p" index="index" separator=",">
+    (#{p.id,jdbcType=BIGINT}, #{p.financeId,jdbcType=BIGINT}, #{p.type,jdbcType=INTEGER},
+      #{p.companyId,jdbcType=BIGINT}, #{p.ordersourceId,jdbcType=VARCHAR}, #{p.codType,jdbcType=INTEGER},
+      #{p.feeType,jdbcType=INTEGER}, #{p.fundAccount,jdbcType=VARCHAR}, #{p.receiptAmount,jdbcType=DECIMAL},
+      #{p.payAmount,jdbcType=DECIMAL}, #{p.surplus,jdbcType=DECIMAL}, #{p.receiptPayNetworkId,jdbcType=INTEGER},
+      #{p.settleNetworkId,jdbcType=INTEGER}, #{p.remark,jdbcType=VARCHAR}, #{p.serviceCharge,jdbcType=DECIMAL},
+      #{p.paymentType,jdbcType=INTEGER}, #{p.settlementMethod,jdbcType=INTEGER}, #{p.payMethod,jdbcType=INTEGER},
+      #{p.receiptCode,jdbcType=VARCHAR}, #{p.payCode,jdbcType=VARCHAR}, #{p.submitBillCode,jdbcType=VARCHAR}, #{p.submitBillId,jdbcType=BIGINT},
+      #{p.submitBillState,jdbcType=INTEGER}, #{p.createBillTime,jdbcType=BIGINT}, #{p.submitBillTime,jdbcType=BIGINT},
+      #{p.receiptPayTime,jdbcType=BIGINT}, #{p.status,jdbcType=INTEGER}, #{p.createUserId,jdbcType=INTEGER},
+      #{p.createTime,jdbcType=BIGINT}, #{p.updateUserId,jdbcType=INTEGER}, #{p.updateTime,jdbcType=BIGINT}
+      )
+      </foreach>
+  </insert>
+  <insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    insert into finance_manage_cash_serial
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="financeId != null">
+        finance_id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="ordersourceId != null">
+        ordersource_id,
+      </if>
+      <if test="codType != null">
+        cod_type,
+      </if>
+      <if test="feeType != null">
+        fee_type,
+      </if>
+      <if test="fundAccount != null">
+        fund_account,
+      </if>
+      <if test="receiptAmount != null">
+        receipt_amount,
+      </if>
+      <if test="payAmount != null">
+        pay_amount,
+      </if>
+      <if test="surplus != null">
+        surplus,
+      </if>
+      <if test="receiptPayNetworkId != null">
+        receipt_pay_network_id,
+      </if>
+      <if test="settleNetworkId != null">
+        settle_network_id,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="serviceCharge != null">
+        service_charge,
+      </if>
+      <if test="paymentType != null">
+        payment_type,
+      </if>
+      <if test="settlementMethod != null">
+        settlement_method,
+      </if>
+      <if test="payMethod != null">
+        pay_method,
+      </if>
+      <if test="receiptCode != null">
+        receipt_code,
+      </if>
+      <if test="payCode != null">
+        pay_code,
+      </if>
+      <if test="submitBillId != null">
+        submit_bill_id,
+      </if>
+      <if test="submitBillCode != null">
+        submit_bill_code,
+      </if>
+      <if test="submitBillState != null">
+        submit_bill_state,
+      </if>
+      <if test="createBillTime != null">
+        create_bill_time,
+      </if>
+      <if test="submitBillTime != null">
+        submit_bill_time,
+      </if>
+      <if test="receiptPayTime != null">
+        receipt_pay_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createUserId != null">
+        create_user_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateUserId != null">
+        update_user_id,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="financeId != null">
+        #{financeId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="ordersourceId != null">
+        #{ordersourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="codType != null">
+        #{codType,jdbcType=INTEGER},
+      </if>
+      <if test="feeType != null">
+        #{feeType,jdbcType=INTEGER},
+      </if>
+      <if test="fundAccount != null">
+        #{fundAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptAmount != null">
+        #{receiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="payAmount != null">
+        #{payAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="surplus != null">
+        #{surplus,jdbcType=DECIMAL},
+      </if>
+      <if test="receiptPayNetworkId != null">
+        #{receiptPayNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="settleNetworkId != null">
+        #{settleNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCharge != null">
+        #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentType != null">
+        #{paymentType,jdbcType=INTEGER},
+      </if>
+      <if test="settlementMethod != null">
+        #{settlementMethod,jdbcType=INTEGER},
+      </if>
+      <if test="payMethod != null">
+        #{payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="receiptCode != null">
+        #{receiptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payCode != null">
+        #{payCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillId != null">
+        #{submitBillId,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillCode != null">
+        #{submitBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillState != null">
+        #{submitBillState,jdbcType=INTEGER},
+      </if>
+      <if test="createBillTime != null">
+        #{createBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillTime != null">
+        #{submitBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="receiptPayTime != null">
+        #{receiptPayTime,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createUserId != null">
+        #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null">
+        #{updateUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    update finance_manage_cash_serial
+    <set>
+      <if test="financeId != null">
+        finance_id = #{financeId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="ordersourceId != null">
+        ordersource_id = #{ordersourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="codType != null">
+        cod_type = #{codType,jdbcType=INTEGER},
+      </if>
+      <if test="feeType != null">
+        fee_type = #{feeType,jdbcType=INTEGER},
+      </if>
+      <if test="fundAccount != null">
+        fund_account = #{fundAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptAmount != null">
+        receipt_amount = #{receiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="payAmount != null">
+        pay_amount = #{payAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="surplus != null">
+        surplus = #{surplus,jdbcType=DECIMAL},
+      </if>
+      <if test="receiptPayNetworkId != null">
+        receipt_pay_network_id = #{receiptPayNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="settleNetworkId != null">
+        settle_network_id = #{settleNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCharge != null">
+        service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentType != null">
+        payment_type = #{paymentType,jdbcType=INTEGER},
+      </if>
+      <if test="settlementMethod != null">
+        settlement_method = #{settlementMethod,jdbcType=INTEGER},
+      </if>
+      <if test="payMethod != null">
+        pay_method = #{payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="receiptCode != null">
+        receipt_code = #{receiptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payCode != null">
+        pay_code = #{payCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillId != null">
+        submit_bill_id = #{submitBillId,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillCode != null">
+        submit_bill_code = #{submitBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillState != null">
+        submit_bill_state = #{submitBillState,jdbcType=INTEGER},
+      </if>
+      <if test="createBillTime != null">
+        create_bill_time = #{createBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillTime != null">
+        submit_bill_time = #{submitBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="receiptPayTime != null">
+        receipt_pay_time = #{receiptPayTime,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createUserId != null">
+        create_user_id = #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null">
+        update_user_id = #{updateUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+    </set>
+          where id = #{id,jdbcType=BIGINT}
+    </update>
+
+  <update id="updateBySubmitId" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    update finance_manage_cash_serial
+    <set>
+      <if test="financeId != null">
+        finance_id = #{financeId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="ordersourceId != null">
+        ordersource_id = #{ordersourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="codType != null">
+        cod_type = #{codType,jdbcType=INTEGER},
+      </if>
+      <if test="feeType != null">
+        fee_type = #{feeType,jdbcType=INTEGER},
+      </if>
+      <if test="fundAccount != null">
+        fund_account = #{fundAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptAmount != null">
+        receipt_amount = #{receiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="payAmount != null">
+        pay_amount = #{payAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="surplus != null">
+        surplus = #{surplus,jdbcType=DECIMAL},
+      </if>
+      <if test="receiptPayNetworkId != null">
+        receipt_pay_network_id = #{receiptPayNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="settleNetworkId != null">
+        settle_network_id = #{settleNetworkId,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceCharge != null">
+        service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentType != null">
+        payment_type = #{paymentType,jdbcType=INTEGER},
+      </if>
+      <if test="settlementMethod != null">
+        settlement_method = #{settlementMethod,jdbcType=INTEGER},
+      </if>
+      <if test="payMethod != null">
+        pay_method = #{payMethod,jdbcType=INTEGER},
+      </if>
+      <if test="receiptCode != null">
+        receipt_code = #{receiptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payCode != null">
+        pay_code = #{payCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillId != null">
+        submit_bill_id = #{submitBillId,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillCode != null">
+        submit_bill_code = #{submitBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="submitBillState != null">
+        submit_bill_state = #{submitBillState,jdbcType=INTEGER},
+      </if>
+      <if test="createBillTime != null">
+        create_bill_time = #{createBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="submitBillTime != null">
+        submit_bill_time = #{submitBillTime,jdbcType=BIGINT},
+      </if>
+      <if test="receiptPayTime != null">
+        receipt_pay_time = #{receiptPayTime,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createUserId != null">
+        create_user_id = #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null">
+        update_user_id = #{updateUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+    </set>
+
+     where submit_bill_id = #{submitBillId,jdbcType=BIGINT}
+
+  </update>
+
+    <update id="emptySpecifiedField"
+            parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    update finance_manage_cash_serial
+    set
+      submit_bill_code = #{submitBillCode,jdbcType=VARCHAR},
+      submit_bill_state = #{submitBillState,jdbcType=INTEGER},
+      submit_bill_time = #{submitBillTime,jdbcType=BIGINT},
+      submit_bill_id = null
+    where submit_bill_id = #{submitBillId,jdbcType=BIGINT}
+  </update>
+    <update id="cancelCommitUpdate"
+            parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    update finance_manage_cash_serial
+    set
+      submit_bill_state = #{submitBillState,jdbcType=INTEGER},
+      submit_bill_time = #{submitBillTime,jdbcType=BIGINT}
+    where submit_bill_id = #{submitBillId,jdbcType=BIGINT}
+  </update>
+    <update id="updateByPrimaryKey"
+            parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageCashSerialDO">
+    update finance_manage_cash_serial
+    set finance_id = #{financeId,jdbcType=BIGINT},
+      type = #{type,jdbcType=INTEGER},
+      company_id = #{companyId,jdbcType=BIGINT},
+      ordersource_id = #{ordersourceId,jdbcType=VARCHAR},
+      cod_type = #{codType,jdbcType=INTEGER},
+      fee_type = #{feeType,jdbcType=INTEGER},
+      fund_account = #{fundAccount,jdbcType=VARCHAR},
+      receipt_amount = #{receiptAmount,jdbcType=DECIMAL},
+      pay_amount = #{payAmount,jdbcType=DECIMAL},
+      surplus = #{surplus,jdbcType=DECIMAL},
+      receipt_pay_network_id = #{receiptPayNetworkId,jdbcType=INTEGER},
+      settle_network_id = #{settleNetworkId,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      payment_type = #{paymentType,jdbcType=INTEGER},
+      settlement_method = #{settlementMethod,jdbcType=INTEGER},
+      pay_method = #{payMethod,jdbcType=INTEGER},
+      receipt_code = #{receiptCode,jdbcType=VARCHAR},
+      pay_code = #{payCode,jdbcType=VARCHAR},
+      submit_bill_id = #{submitBillId,jdbcType=VARCHAR},
+      submit_bill_code = #{submitBillCode,jdbcType=VARCHAR},
+      submit_bill_state = #{submitBillState,jdbcType=INTEGER},
+      create_bill_time = #{createBillTime,jdbcType=BIGINT},
+      submit_bill_time = #{submitBillTime,jdbcType=BIGINT},
+      receipt_pay_time = #{receiptPayTime,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      create_user_id = #{createUserId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_user_id = #{updateUserId,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <delete id="deleteBatch">
+        delete from finance_manage_cash_serial where id in
+        <foreach item="i" collection="list" open="(" separator="," close=")">
+            #{i.id, jdbcType = BIGINT}
+        </foreach>
+    </delete>
+
+    <update id="updateBatchContainsNull">
+        UPDATE finance_manage_cash_serial
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix=" submit_bill_code = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillCode, jdbcType = VARCHAR}
+                </foreach>
+            </trim>
+            <trim prefix=" submit_bill_state = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillState, jdbcType = INTEGER}
+                </foreach>
+            </trim>
+            <trim prefix=" submit_bill_time = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillTime, jdbcType = BIGINT}
+                </foreach>
+            </trim>
+        </trim>
+        WHERE
+        <foreach collection="list" separator="or" item="i" index="index">
+            id = #{i.id, jdbcType = BIGINT}
+        </foreach>
+    </update>
+
+    <update id="updateSubmitCodeBatch">
+        update finance_manage_cash_serial set
+        submit_bill_id = #{submitBillId,jdbcType=VARCHAR},
+        submit_bill_code = #{submitBillCode,jdbcType=VARCHAR},
+        submit_bill_state = #{submitBillState,jdbcType=INTEGER}
+        WHERE id in
+        <foreach item="i" collection="ids" open="(" separator="," close=")">
+            #{i, jdbcType = BIGINT}
+        </foreach>
+    </update>
+
+    <!--批量更新-->
+    <update id="updateBatch">
+        UPDATE finance_manage_cash_serial
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="submit_bill_code = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.submitBillCode != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillCode, jdbcType = VARCHAR}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" submit_bill_state = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.submitBillState != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillState, jdbcType = INTEGER}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" submit_bill_time = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.submitBillTime != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillTime, jdbcType = BIGINT}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" submit_bill_id = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.submitBillId != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.submitBillId, jdbcType = BIGINT}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" update_user_id = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.updateUserId != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.updateUserId, jdbcType = BIGINT}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" update_time = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.updateTime != null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.updateTime, jdbcType = BIGINT}
+                    </if>
+                </foreach>
+            </trim>
+        </trim>
+        WHERE
+        <foreach collection="list" separator="or" item="i" index="index">
+            id = #{i.id, jdbcType = BIGINT}
+        </foreach>
+    </update>
+
+</mapper>

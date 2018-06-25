@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.finance.FinanceManageGoodsRecycleMapper">
+  <resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="receive_branch_id" jdbcType="INTEGER" property="receiveBranchId" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="recycle_status" jdbcType="INTEGER" property="recycleStatus" />
+    <result column="send_status" jdbcType="INTEGER" property="sendStatus" />
+    <result column="remit_status" jdbcType="INTEGER" property="remitStatus" />
+    <result column="waybill_id" jdbcType="BIGINT" property="waybillId" />
+    <result column="order_source_code" jdbcType="VARCHAR" property="orderSourceCode" />
+    <result column="payee_name" jdbcType="VARCHAR" property="payeeName" />
+    <result column="receipted_amount" jdbcType="DECIMAL" property="receiptedAmount" />
+    <result column="unreceipt_amount" jdbcType="DECIMAL" property="unreceiptAmount" />
+    <result column="receipt_amount" jdbcType="DECIMAL" property="receiptAmount" />
+    <result column="remit_branch_id" jdbcType="INTEGER" property="remitBranchId" />
+    <result column="remit_out_account" jdbcType="VARCHAR" property="remitOutAccount" />
+    <result column="remit_in_account" jdbcType="VARCHAR" property="remitInAccount" />
+    <result column="remit_remark" jdbcType="VARCHAR" property="remitRemark" />
+    <result column="recycle_user_id" jdbcType="INTEGER" property="recycleUserId" />
+    <result column="recycle_time" jdbcType="BIGINT" property="recycleTime" />
+    <result column="remit_user_id" jdbcType="INTEGER" property="remitUserId" />
+    <result column="remit_time" jdbcType="BIGINT" property="remitTime" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="update_user_id" jdbcType="INTEGER" property="updateUserId" />
+    <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, receive_branch_id, company_id, recycle_status, remit_status, waybill_id, order_source_code, send_status,
+    payee_name, receipted_amount, unreceipt_amount, receipt_amount, remit_branch_id, 
+    remit_out_account, remit_in_account, remit_remark, recycle_user_id, recycle_time, 
+    remit_user_id, remit_time, create_user_id, create_time, update_user_id, update_time
+  </sql>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from finance_manage_goods_recycle
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByWaybillId" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    delete from finance_manage_goods_recycle
+    where waybill_id = #{waybillId}
+  </delete>
+  <insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    insert into finance_manage_goods_recycle (id, receive_branch_id, company_id, send_status,
+      recycle_status, remit_status, waybill_id, 
+      order_source_code, payee_name, receipted_amount, 
+      unreceipt_amount, receipt_amount, remit_branch_id, 
+      remit_out_account, remit_in_account, remit_remark, 
+      recycle_user_id, recycle_time, remit_user_id, 
+      remit_time, create_user_id, create_time, 
+      update_user_id, update_time)
+    values (#{id,jdbcType=BIGINT}, #{receiveBranchId,jdbcType=INTEGER}, #{companyId,jdbcType=BIGINT}, #{sendStatus,jdbcType=INTEGER},
+      #{recycleStatus,jdbcType=INTEGER}, #{remitStatus,jdbcType=INTEGER}, #{waybillId,jdbcType=BIGINT}, 
+      #{orderSourceCode,jdbcType=VARCHAR}, #{payeeName,jdbcType=VARCHAR}, #{receiptedAmount,jdbcType=DECIMAL}, 
+      #{unreceiptAmount,jdbcType=DECIMAL}, #{receiptAmount,jdbcType=DECIMAL}, #{remitBranchId,jdbcType=INTEGER}, 
+      #{remitOutAccount,jdbcType=VARCHAR}, #{remitInAccount,jdbcType=VARCHAR}, #{remitRemark,jdbcType=VARCHAR}, 
+      #{recycleUserId,jdbcType=INTEGER}, #{recycleTime,jdbcType=BIGINT}, #{remitUserId,jdbcType=INTEGER}, 
+      #{remitTime,jdbcType=BIGINT}, #{createUserId,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT}, 
+      #{updateUserId,jdbcType=INTEGER}, #{updateTime,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    insert into finance_manage_goods_recycle
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="receiveBranchId != null">
+        receive_branch_id,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="recycleStatus != null">
+        recycle_status,
+      </if>
+      <if test="sendStatus != null">
+        send_status,
+      </if>
+      <if test="remitStatus != null">
+        remit_status,
+      </if>
+      <if test="waybillId != null">
+        waybill_id,
+      </if>
+      <if test="orderSourceCode != null">
+        order_source_code,
+      </if>
+      <if test="payeeName != null">
+        payee_name,
+      </if>
+      <if test="receiptedAmount != null">
+        receipted_amount,
+      </if>
+      <if test="unreceiptAmount != null">
+        unreceipt_amount,
+      </if>
+      <if test="receiptAmount != null">
+        receipt_amount,
+      </if>
+      <if test="remitBranchId != null">
+        remit_branch_id,
+      </if>
+      <if test="remitOutAccount != null">
+        remit_out_account,
+      </if>
+      <if test="remitInAccount != null">
+        remit_in_account,
+      </if>
+      <if test="remitRemark != null">
+        remit_remark,
+      </if>
+      <if test="recycleUserId != null">
+        recycle_user_id,
+      </if>
+      <if test="recycleTime != null">
+        recycle_time,
+      </if>
+      <if test="remitUserId != null">
+        remit_user_id,
+      </if>
+      <if test="remitTime != null">
+        remit_time,
+      </if>
+      <if test="createUserId != null">
+        create_user_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateUserId != null">
+        update_user_id,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="receiveBranchId != null">
+        #{receiveBranchId,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="recycleStatus != null">
+        #{recycleStatus,jdbcType=INTEGER},
+      </if>
+      <if test="sendStatus != null">
+        #{sendStatus,jdbcType=INTEGER},
+      </if>
+      <if test="remitStatus != null">
+        #{remitStatus,jdbcType=INTEGER},
+      </if>
+      <if test="waybillId != null">
+        #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="orderSourceCode != null">
+        #{orderSourceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeName != null">
+        #{payeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptedAmount != null">
+        #{receiptedAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="unreceiptAmount != null">
+        #{unreceiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="receiptAmount != null">
+        #{receiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="remitBranchId != null">
+        #{remitBranchId,jdbcType=INTEGER},
+      </if>
+      <if test="remitOutAccount != null">
+        #{remitOutAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="remitInAccount != null">
+        #{remitInAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="remitRemark != null">
+        #{remitRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="recycleUserId != null">
+        #{recycleUserId,jdbcType=INTEGER},
+      </if>
+      <if test="recycleTime != null">
+        #{recycleTime,jdbcType=BIGINT},
+      </if>
+      <if test="remitUserId != null">
+        #{remitUserId,jdbcType=INTEGER},
+      </if>
+      <if test="remitTime != null">
+        #{remitTime,jdbcType=BIGINT},
+      </if>
+      <if test="createUserId != null">
+        #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null">
+        #{updateUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    update finance_manage_goods_recycle
+    <set>
+      <if test="receiveBranchId != null">
+        receive_branch_id = #{receiveBranchId,jdbcType=INTEGER},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="recycleStatus != null">
+        recycle_status = #{recycleStatus,jdbcType=INTEGER},
+      </if>
+      <if test="sendStatus != null">
+        send_status = #{sendStatus,jdbcType=INTEGER},
+      </if>
+      <if test="remitStatus != null">
+        remit_status = #{remitStatus,jdbcType=INTEGER},
+      </if>
+      <if test="waybillId != null">
+        waybill_id = #{waybillId,jdbcType=BIGINT},
+      </if>
+      <if test="orderSourceCode != null">
+        order_source_code = #{orderSourceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="payeeName != null">
+        payee_name = #{payeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptedAmount != null">
+        receipted_amount = #{receiptedAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="unreceiptAmount != null">
+        unreceipt_amount = #{unreceiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="receiptAmount != null">
+        receipt_amount = #{receiptAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="remitBranchId != null">
+        remit_branch_id = #{remitBranchId,jdbcType=INTEGER},
+      </if>
+      <if test="remitOutAccount != null">
+        remit_out_account = #{remitOutAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="remitInAccount != null">
+        remit_in_account = #{remitInAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="remitRemark != null">
+        remit_remark = #{remitRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="recycleUserId != null">
+        recycle_user_id = #{recycleUserId,jdbcType=INTEGER},
+      </if>
+      <if test="recycleTime != null">
+        recycle_time = #{recycleTime,jdbcType=BIGINT},
+      </if>
+      <if test="remitUserId != null">
+        remit_user_id = #{remitUserId,jdbcType=INTEGER},
+      </if>
+      <if test="remitTime != null">
+        remit_time = #{remitTime,jdbcType=BIGINT},
+      </if>
+      <if test="createUserId != null">
+        create_user_id = #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUserId != null">
+        update_user_id = #{updateUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceManageGoodsRecycleDO">
+    update finance_manage_goods_recycle
+    set receive_branch_id = #{receiveBranchId,jdbcType=INTEGER},
+      company_id = #{companyId,jdbcType=BIGINT},
+      recycle_status = #{recycleStatus,jdbcType=INTEGER},
+      send_status = #{sendStatus,jdbcType=INTEGER},
+      remit_status = #{remitStatus,jdbcType=INTEGER},
+      waybill_id = #{waybillId,jdbcType=BIGINT},
+      order_source_code = #{orderSourceCode,jdbcType=VARCHAR},
+      payee_name = #{payeeName,jdbcType=VARCHAR},
+      receipted_amount = #{receiptedAmount,jdbcType=DECIMAL},
+      unreceipt_amount = #{unreceiptAmount,jdbcType=DECIMAL},
+      receipt_amount = #{receiptAmount,jdbcType=DECIMAL},
+      remit_branch_id = #{remitBranchId,jdbcType=INTEGER},
+      remit_out_account = #{remitOutAccount,jdbcType=VARCHAR},
+      remit_in_account = #{remitInAccount,jdbcType=VARCHAR},
+      remit_remark = #{remitRemark,jdbcType=VARCHAR},
+      recycle_user_id = #{recycleUserId,jdbcType=INTEGER},
+      recycle_time = #{recycleTime,jdbcType=BIGINT},
+      remit_user_id = #{remitUserId,jdbcType=INTEGER},
+      remit_time = #{remitTime,jdbcType=BIGINT},
+      create_user_id = #{createUserId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_user_id = #{updateUserId,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id = "updateByBatch">
+  	UPDATE finance_manage_goods_recycle
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix=" receipted_amount = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.receiptedAmount!=null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.receiptedAmount, jdbcType = DECIMAL}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix=" unreceipt_amount = case" suffix="end,">
+                <foreach collection="list" item="i" index="index">
+                    <if test="i.unreceiptAmount!=null">
+                        when id = #{i.id, jdbcType = BIGINT} then #{i.unreceiptAmount, jdbcType = DECIMAL}
+                    </if>
+                </foreach>
+            </trim>
+        </trim>
+        WHERE
+        <foreach collection="list" separator="or" item="i" index="index">
+            id = #{i.id, jdbcType = BIGINT}
+        </foreach>
+  </update>
+  <update id="batchUpdateRemitInfo">
+    UPDATE finance_manage_goods_recycle
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix=" remit_status = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitStatus!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitStatus, jdbcType = INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix=" remit_user_id = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitUserId!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitUserId, jdbcType = INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix=" remit_time = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitTime!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitTime, jdbcType = INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix=" remit_branch_id = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitBranchId!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitBranchId, jdbcType = INTEGER}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix=" remit_out_account = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitOutAccount!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitOutAccount, jdbcType = VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix=" remit_in_account = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitInAccount!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitInAccount, jdbcType = VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="  remit_remark = case" suffix="end,">
+        <foreach collection="list" item="i" index="index">
+          <if test="i.remitRemark!=null">
+            when id = #{i.id, jdbcType = BIGINT} then #{i.remitRemark, jdbcType = VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+    </trim>
+    WHERE
+    <foreach collection="list" separator="or" item="i" index="index">
+      id = #{i.id, jdbcType = BIGINT}
+    </foreach>
+  </update>
+</mapper>

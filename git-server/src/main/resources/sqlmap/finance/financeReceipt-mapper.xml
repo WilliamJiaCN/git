@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hivescm.tms.finance.server.dao.mapper.finance.FinanceReceiptMapper">
+  <resultMap id="BaseResultMap" type="com.hivescm.tms.finance.server.dao.entity.finance.FinanceReceipt">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ri_id" jdbcType="BIGINT" property="riId" />
+    <result column="receipt_code" jdbcType="VARCHAR" property="receiptCode" />
+    <result column="confirm_receipt" jdbcType="INTEGER" property="confirmReceipt" />
+    <result column="confirm_receipt_time" jdbcType="BIGINT" property="confirmReceiptTime" />
+    <result column="confirm_receipt_user" jdbcType="VARCHAR" property="confirmReceiptUser" />
+    <result column="receipt_type" jdbcType="INTEGER" property="receiptType" />
+    <result column="source_bill_type" jdbcType="VARCHAR" property="sourceBillType" />
+    <result column="source_number" jdbcType="VARCHAR" property="sourceNumber" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="bill_state" jdbcType="INTEGER" property="billState" />
+    <result column="bill_date" jdbcType="BIGINT" property="billDate" />
+    <result column="receivables_organization" jdbcType="VARCHAR" property="receivablesOrganization" />
+    <result column="current_object_type" jdbcType="INTEGER" property="currentObjectType" />
+    <result column="business_object" jdbcType="VARCHAR" property="businessObject" />
+    <result column="pay_object" jdbcType="VARCHAR" property="payObject" />
+    <result column="payable_object" jdbcType="VARCHAR" property="payableObject" />
+    <result column="currency" jdbcType="INTEGER" property="currency" />
+    <result column="receivable_money" jdbcType="DECIMAL" property="receivableMoney" />
+    <result column="brokerage" jdbcType="DECIMAL" property="brokerage" />
+    <result column="arrival_amount_money" jdbcType="DECIMAL" property="arrivalAmountMoney" />
+    <result column="receivables_type" jdbcType="VARCHAR" property="receivablesType" />
+    <result column="receivables_property" jdbcType="VARCHAR" property="receivablesProperty" />
+    <result column="payment_mode" jdbcType="VARCHAR" property="paymentMode" />
+    <result column="settlement_mode" jdbcType="INTEGER" property="settlementMode" />
+    <result column="receivables_bank_account" jdbcType="VARCHAR" property="receivablesBankAccount" />
+    <result column="pay_bank_account" jdbcType="VARCHAR" property="payBankAccount" />
+    <result column="pay_status" jdbcType="INTEGER" property="payStatus" />
+    <result column="business_organization" jdbcType="VARCHAR" property="businessOrganization" />
+    <result column="receivable_organization" jdbcType="INTEGER" property="receivableOrganization" />
+    <result column="salesman" jdbcType="VARCHAR" property="salesman" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="original_bill_number" jdbcType="VARCHAR" property="originalBillNumber" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="company_id" jdbcType="BIGINT" property="companyId" />
+    <result column="create_user" jdbcType="INTEGER" property="createUser" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="update_user" jdbcType="INTEGER" property="updateUser" />
+    <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, ri_id, receipt_code, confirm_receipt, confirm_receipt_time, confirm_receipt_user,
+    receipt_type, source_bill_type, source_number, status, bill_state, bill_date, receivables_organization,
+    current_object_type, business_object, pay_object, payable_object, currency, receivable_money,
+    brokerage, arrival_amount_money, receivables_type, receivables_property, payment_mode,
+    settlement_mode, receivables_bank_account, pay_bank_account, pay_status, business_organization,
+    receivable_organization, salesman, department, original_bill_number, comment, company_id,
+    create_user, create_time, update_user, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from finance_receipt
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from finance_receipt
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceReceipt">
+    insert into finance_receipt (id, ri_id, receipt_code,
+    confirm_receipt, confirm_receipt_time, confirm_receipt_user,
+    receipt_type, source_bill_type, source_number,
+    status, bill_state, bill_date,
+    receivables_organization, current_object_type,
+    business_object, pay_object, payable_object,
+    currency, receivable_money, brokerage,
+    arrival_amount_money, receivables_type, receivables_property,
+    payment_mode, settlement_mode, receivables_bank_account,
+    pay_bank_account, pay_status, business_organization,
+    receivable_organization, salesman, department,
+    original_bill_number, comment, company_id,
+    create_user, create_time, update_user,
+    update_time)
+    values (#{id,jdbcType=BIGINT}, #{riId,jdbcType=BIGINT}, #{receiptCode,jdbcType=VARCHAR},
+    #{confirmReceipt,jdbcType=INTEGER}, #{confirmReceiptTime,jdbcType=BIGINT}, #{confirmReceiptUser,jdbcType=VARCHAR},
+    #{receiptType,jdbcType=INTEGER}, #{sourceBillType,jdbcType=VARCHAR}, #{sourceNumber,jdbcType=VARCHAR},
+    #{status,jdbcType=INTEGER}, #{billState,jdbcType=INTEGER}, #{billDate,jdbcType=BIGINT},
+    #{receivablesOrganization,jdbcType=VARCHAR}, #{currentObjectType,jdbcType=INTEGER},
+    #{businessObject,jdbcType=VARCHAR}, #{payObject,jdbcType=VARCHAR}, #{payableObject,jdbcType=VARCHAR},
+    #{currency,jdbcType=VARCHAR}, #{receivableMoney,jdbcType=DECIMAL}, #{brokerage,jdbcType=DECIMAL},
+    #{arrivalAmountMoney,jdbcType=DECIMAL}, #{receivablesType,jdbcType=VARCHAR}, #{receivablesProperty,jdbcType=VARCHAR},
+    #{paymentMode,jdbcType=VARCHAR}, #{settlementMode,jdbcType=INTEGER}, #{receivablesBankAccount,jdbcType=VARCHAR},
+    #{payBankAccount,jdbcType=VARCHAR}, #{payStatus,jdbcType=INTEGER}, #{businessOrganization,jdbcType=VARCHAR},
+    #{receivableOrganization,jdbcType=INTEGER}, #{salesman,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR},
+    #{originalBillNumber,jdbcType=VARCHAR}, #{comment,jdbcType=VARCHAR}, #{companyId,jdbcType=BIGINT},
+    #{createUser,jdbcType=INTEGER}, #{createTime,jdbcType=BIGINT}, #{updateUser,jdbcType=INTEGER},
+    #{updateTime,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceReceipt">
+    insert into finance_receipt
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="riId != null">
+        ri_id,
+      </if>
+      <if test="receiptCode != null">
+        receipt_code,
+      </if>
+      <if test="confirmReceipt != null">
+        confirm_receipt,
+      </if>
+      <if test="confirmReceiptTime != null">
+        confirm_receipt_time,
+      </if>
+      <if test="confirmReceiptUser != null">
+        confirm_receipt_user,
+      </if>
+      <if test="receiptType != null">
+        receipt_type,
+      </if>
+      <if test="sourceBillType != null">
+        source_bill_type,
+      </if>
+      <if test="sourceNumber != null">
+        source_number,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="billState != null">
+        bill_state,
+      </if>
+      <if test="billDate != null">
+        bill_date,
+      </if>
+      <if test="receivablesOrganization != null">
+        receivables_organization,
+      </if>
+      <if test="currentObjectType != null">
+        current_object_type,
+      </if>
+      <if test="businessObject != null">
+        business_object,
+      </if>
+      <if test="payObject != null">
+        pay_object,
+      </if>
+      <if test="payableObject != null">
+        payable_object,
+      </if>
+      <if test="currency != null">
+        currency,
+      </if>
+      <if test="receivableMoney != null">
+        receivable_money,
+      </if>
+      <if test="brokerage != null">
+        brokerage,
+      </if>
+      <if test="arrivalAmountMoney != null">
+        arrival_amount_money,
+      </if>
+      <if test="receivablesType != null">
+        receivables_type,
+      </if>
+      <if test="receivablesProperty != null">
+        receivables_property,
+      </if>
+      <if test="paymentMode != null">
+        payment_mode,
+      </if>
+      <if test="settlementMode != null">
+        settlement_mode,
+      </if>
+      <if test="receivablesBankAccount != null">
+        receivables_bank_account,
+      </if>
+      <if test="payBankAccount != null">
+        pay_bank_account,
+      </if>
+      <if test="payStatus != null">
+        pay_status,
+      </if>
+      <if test="businessOrganization != null">
+        business_organization,
+      </if>
+      <if test="receivableOrganization != null">
+        receivable_organization,
+      </if>
+      <if test="salesman != null">
+        salesman,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="originalBillNumber != null">
+        original_bill_number,
+      </if>
+      <if test="comment != null">
+        comment,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateUser != null">
+        update_user,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="riId != null">
+        #{riId,jdbcType=BIGINT},
+      </if>
+      <if test="receiptCode != null">
+        #{receiptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="confirmReceipt != null">
+        #{confirmReceipt,jdbcType=INTEGER},
+      </if>
+      <if test="confirmReceiptTime != null">
+        #{confirmReceiptTime,jdbcType=BIGINT},
+      </if>
+      <if test="confirmReceiptUser != null">
+        #{confirmReceiptUser,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptType != null">
+        #{receiptType,jdbcType=INTEGER},
+      </if>
+      <if test="sourceBillType != null">
+        #{sourceBillType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceNumber != null">
+        #{sourceNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="billState != null">
+        #{billState,jdbcType=INTEGER},
+      </if>
+      <if test="billDate != null">
+        #{billDate,jdbcType=BIGINT},
+      </if>
+      <if test="receivablesOrganization != null">
+        #{receivablesOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="currentObjectType != null">
+        #{currentObjectType,jdbcType=INTEGER},
+      </if>
+      <if test="businessObject != null">
+        #{businessObject,jdbcType=VARCHAR},
+      </if>
+      <if test="payObject != null">
+        #{payObject,jdbcType=VARCHAR},
+      </if>
+      <if test="payableObject != null">
+        #{payableObject,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null">
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="receivableMoney != null">
+        #{receivableMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="brokerage != null">
+        #{brokerage,jdbcType=DECIMAL},
+      </if>
+      <if test="arrivalAmountMoney != null">
+        #{arrivalAmountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="receivablesType != null">
+        #{receivablesType,jdbcType=VARCHAR},
+      </if>
+      <if test="receivablesProperty != null">
+        #{receivablesProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentMode != null">
+        #{paymentMode,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementMode != null">
+        #{settlementMode,jdbcType=INTEGER},
+      </if>
+      <if test="receivablesBankAccount != null">
+        #{receivablesBankAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="payBankAccount != null">
+        #{payBankAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="payStatus != null">
+        #{payStatus,jdbcType=INTEGER},
+      </if>
+      <if test="businessOrganization != null">
+        #{businessOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="receivableOrganization != null">
+        #{receivableOrganization,jdbcType=INTEGER},
+      </if>
+      <if test="salesman != null">
+        #{salesman,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="originalBillNumber != null">
+        #{originalBillNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null">
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceReceipt">
+    update finance_receipt
+    <set>
+      <if test="riId != null">
+        ri_id = #{riId,jdbcType=BIGINT},
+      </if>
+      <if test="receiptCode != null">
+        receipt_code = #{receiptCode,jdbcType=VARCHAR},
+      </if>
+      <if test="confirmReceipt != null">
+        confirm_receipt = #{confirmReceipt,jdbcType=INTEGER},
+      </if>
+      <if test="confirmReceiptTime != null">
+        confirm_receipt_time = #{confirmReceiptTime,jdbcType=BIGINT},
+      </if>
+      <if test="confirmReceiptUser != null">
+        confirm_receipt_user = #{confirmReceiptUser,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptType != null">
+        receipt_type = #{receiptType,jdbcType=INTEGER},
+      </if>
+      <if test="sourceBillType != null">
+        source_bill_type = #{sourceBillType,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceNumber != null">
+        source_number = #{sourceNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="billState != null">
+        bill_state = #{billState,jdbcType=INTEGER},
+      </if>
+      <if test="billDate != null">
+        bill_date = #{billDate,jdbcType=BIGINT},
+      </if>
+      <if test="receivablesOrganization != null">
+        receivables_organization = #{receivablesOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="currentObjectType != null">
+        current_object_type = #{currentObjectType,jdbcType=INTEGER},
+      </if>
+      <if test="businessObject != null">
+        business_object = #{businessObject,jdbcType=VARCHAR},
+      </if>
+      <if test="payObject != null">
+        pay_object = #{payObject,jdbcType=VARCHAR},
+      </if>
+      <if test="payableObject != null">
+        payable_object = #{payableObject,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null">
+        currency = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="receivableMoney != null">
+        receivable_money = #{receivableMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="brokerage != null">
+        brokerage = #{brokerage,jdbcType=DECIMAL},
+      </if>
+      <if test="arrivalAmountMoney != null">
+        arrival_amount_money = #{arrivalAmountMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="receivablesType != null">
+        receivables_type = #{receivablesType,jdbcType=VARCHAR},
+      </if>
+      <if test="receivablesProperty != null">
+        receivables_property = #{receivablesProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentMode != null">
+        payment_mode = #{paymentMode,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementMode != null">
+        settlement_mode = #{settlementMode,jdbcType=INTEGER},
+      </if>
+      <if test="receivablesBankAccount != null">
+        receivables_bank_account = #{receivablesBankAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="payBankAccount != null">
+        pay_bank_account = #{payBankAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="payStatus != null">
+        pay_status = #{payStatus,jdbcType=INTEGER},
+      </if>
+      <if test="businessOrganization != null">
+        business_organization = #{businessOrganization,jdbcType=VARCHAR},
+      </if>
+      <if test="receivableOrganization != null">
+        receivable_organization = #{receivableOrganization,jdbcType=INTEGER},
+      </if>
+      <if test="salesman != null">
+        salesman = #{salesman,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="originalBillNumber != null">
+        original_bill_number = #{originalBillNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="comment != null">
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=BIGINT},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        update_user = #{updateUser,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hivescm.tms.finance.server.dao.entity.finance.FinanceReceipt">
+    update finance_receipt
+    set ri_id = #{riId,jdbcType=BIGINT},
+      receipt_code = #{receiptCode,jdbcType=VARCHAR},
+      confirm_receipt = #{confirmReceipt,jdbcType=INTEGER},
+      confirm_receipt_time = #{confirmReceiptTime,jdbcType=BIGINT},
+      confirm_receipt_user = #{confirmReceiptUser,jdbcType=VARCHAR},
+      receipt_type = #{receiptType,jdbcType=INTEGER},
+      source_bill_type = #{sourceBillType,jdbcType=VARCHAR},
+      source_number = #{sourceNumber,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      bill_state = #{billState,jdbcType=INTEGER},
+      bill_date = #{billDate,jdbcType=BIGINT},
+      receivables_organization = #{receivablesOrganization,jdbcType=VARCHAR},
+      current_object_type = #{currentObjectType,jdbcType=INTEGER},
+      business_object = #{businessObject,jdbcType=VARCHAR},
+      pay_object = #{payObject,jdbcType=VARCHAR},
+      payable_object = #{payableObject,jdbcType=VARCHAR},
+      currency = #{currency,jdbcType=VARCHAR},
+      receivable_money = #{receivableMoney,jdbcType=DECIMAL},
+      brokerage = #{brokerage,jdbcType=DECIMAL},
+      arrival_amount_money = #{arrivalAmountMoney,jdbcType=DECIMAL},
+      receivables_type = #{receivablesType,jdbcType=VARCHAR},
+      receivables_property = #{receivablesProperty,jdbcType=VARCHAR},
+      payment_mode = #{paymentMode,jdbcType=VARCHAR},
+      settlement_mode = #{settlementMode,jdbcType=INTEGER},
+      receivables_bank_account = #{receivablesBankAccount,jdbcType=VARCHAR},
+      pay_bank_account = #{payBankAccount,jdbcType=VARCHAR},
+      pay_status = #{payStatus,jdbcType=INTEGER},
+      business_organization = #{businessOrganization,jdbcType=VARCHAR},
+      receivable_organization = #{receivableOrganization,jdbcType=INTEGER},
+      salesman = #{salesman,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
+      original_bill_number = #{originalBillNumber,jdbcType=VARCHAR},
+      comment = #{comment,jdbcType=VARCHAR},
+      company_id = #{companyId,jdbcType=BIGINT},
+      create_user = #{createUser,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+  <!-- 自定义 SQL -->
+  <update id="updateReceiptConfirm">
+    update finance_receipt
+    set
+      confirm_receipt = #{record.confirmReceipt},
+      confirm_receipt_user = #{record.confirmReceiptUser},
+      confirm_receipt_time = #{record.confirmReceiptTime},
+      update_user = #{record.updateUser},
+      update_time = #{record.updateTime}
+    where id in
+    <foreach collection="list" item="item" open="(" separator="," close=")">
+      #{item,jdbcType=BIGINT}
+    </foreach>
+  </update>
+</mapper>
