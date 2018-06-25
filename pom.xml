@@ -8,6 +8,7 @@
     <modules>
         <module>git-common</module>
         <module>git-api</module>
+        <module>git-server</module>
     </modules>
     <dependencyManagement>
         <dependencies>
