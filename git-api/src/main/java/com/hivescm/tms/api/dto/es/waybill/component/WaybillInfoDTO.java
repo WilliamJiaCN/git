@@ -1,11 +1,12 @@
 package com.hivescm.tms.api.dto.es.waybill.component;
 
-import java.io.Serializable;
-import java.util.List;
 import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @ToString
 @Data
 public class WaybillInfoDTO implements Serializable {

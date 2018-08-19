@@ -1,11 +1,10 @@
 package com.hivescm.tms.api.dto.es.waybill.request;
 
+import com.hivescm.framework.logger.api.annotation.Logger;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-
-import com.hivescm.framework.logger.api.annotation.Logger;
 /**
  * 运单打印请求对象
  *

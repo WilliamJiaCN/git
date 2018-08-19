@@ -1,10 +1,9 @@
 package com.hivescm.tms.api.dto.es.dispatcher.request;
 
-import java.io.Serializable;
-
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 派车单打印请求体

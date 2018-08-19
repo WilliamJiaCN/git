@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.finance.request;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.dto.es.finance.FinanceManageReceiptEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by 919610864 on 2018/5/1.

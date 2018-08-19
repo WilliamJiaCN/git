@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.waybill.component.TmsWaybillEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 城配智能调度运单列表+统计信息响应实体

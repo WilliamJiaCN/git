@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.base.request;
 
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 @Data
 @ToString

@@ -3,7 +3,6 @@ package com.hivescm.tms.api.dto.es.dispatcher.request;
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherStatusEnum;
 import com.hivescm.tms.api.enums.biz.waybill.WaybillStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

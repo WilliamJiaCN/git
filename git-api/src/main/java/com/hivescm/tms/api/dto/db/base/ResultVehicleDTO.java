@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.db.base;
 
-import java.util.List;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 @Data
 @ToString
 public class ResultVehicleDTO {

@@ -1,15 +1,13 @@
 package com.hivescm.tms.api.dto.es.dispatcher.request;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
-import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 派车单新增请求实体用于外部接口调用

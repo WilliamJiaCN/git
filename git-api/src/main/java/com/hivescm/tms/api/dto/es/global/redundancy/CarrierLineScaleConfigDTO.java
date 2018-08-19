@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.global.redundancy;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 承运商线路比例配置DTO

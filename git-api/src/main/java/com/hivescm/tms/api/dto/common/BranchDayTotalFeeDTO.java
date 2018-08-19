@@ -1,10 +1,9 @@
 package com.hivescm.tms.api.dto.common;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
 
 @Data
 @ToString

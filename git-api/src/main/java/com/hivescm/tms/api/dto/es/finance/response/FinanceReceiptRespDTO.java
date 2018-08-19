@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 

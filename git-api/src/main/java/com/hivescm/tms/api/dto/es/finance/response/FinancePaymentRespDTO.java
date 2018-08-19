@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.hivescm.common.domain.PagedList;
 import com.hivescm.tms.api.dto.es.finance.PayOriginazationDTO;
 import com.hivescm.tms.api.dto.es.finance.PayeeObjectDTO;
 import com.hivescm.tms.api.dto.es.finance.component.FinancePaymentESDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 @Data
 @ToString
 public class FinancePaymentRespDTO implements Serializable {

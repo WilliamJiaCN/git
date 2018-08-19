@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.orderrule.request;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 查询承运商运力 请求体
  * @author Administrator

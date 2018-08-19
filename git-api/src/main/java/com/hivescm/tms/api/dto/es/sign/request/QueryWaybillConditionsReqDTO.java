@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.sign.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.escenter.common.conditions.OrderCondition;
 import com.hivescm.escenter.common.conditions.PageCondition;
 import com.hivescm.escenter.common.conditions.SearchCondition;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
 * @author  boqiang.deng

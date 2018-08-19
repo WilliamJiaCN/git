@@ -1,7 +1,5 @@
 package com.hivescm.tms.api.enums.biz.bill;
 
-import com.hivescm.tms.api.enums.biz.waybill.WaybillDiscardTypeEnum;
-
 /**
  * 单据类型枚举 -> tms-billstatus 数据字典
  * @author ke.huang

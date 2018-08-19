@@ -1,6 +1,5 @@
 package com.hivescm.tms.api.dto.es.finance;
 
-import com.hivescm.framework.elasticsearch.annotation.Cascade;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

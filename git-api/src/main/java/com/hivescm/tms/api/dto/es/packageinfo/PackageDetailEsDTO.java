@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.packageinfo;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString

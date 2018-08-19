@@ -1,20 +1,17 @@
 package com.hivescm.tms.api.dto.es.exception.response;
 
 
-
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionAttachEsDTO;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionCloseEsDTO;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionEsDTO;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionProcessEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

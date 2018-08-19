@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.order.redundancy;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * OMS订单错误日志

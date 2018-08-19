@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.order.component;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.List;
 @Data
 @ToString
 public class TmsAcceptOrderStatistics {

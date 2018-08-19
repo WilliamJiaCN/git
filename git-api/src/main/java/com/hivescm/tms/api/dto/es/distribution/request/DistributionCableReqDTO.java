@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.distribution.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 城配一键排线请求实体

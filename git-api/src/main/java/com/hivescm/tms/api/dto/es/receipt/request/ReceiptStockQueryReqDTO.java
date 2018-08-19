@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.receipt.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.enums.bill.receipt.ReceiptPickStockTypeEnum;
 import com.hivescm.tms.api.enums.bill.receipt.ReceiptStockQueryTimeTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 回单库存列表查询请求DTO

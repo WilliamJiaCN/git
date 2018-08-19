@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.orderrule.request;
 
-import java.io.Serializable;
 import com.hivescm.tms.api.dto.es.orderrule.CarrierOrderRuleEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 承运商接单规则创建
  * @author Administrator

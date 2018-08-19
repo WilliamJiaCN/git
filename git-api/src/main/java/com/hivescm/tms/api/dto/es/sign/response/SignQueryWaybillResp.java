@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.sign.response;
 
+import com.hivescm.framework.entitymapping.annotation.Mapping;
+import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
+import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
+import lombok.Data;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
-
-import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
-
-import lombok.Data;
-import lombok.ToString;
 
 /**
 * @author  boqiang.deng

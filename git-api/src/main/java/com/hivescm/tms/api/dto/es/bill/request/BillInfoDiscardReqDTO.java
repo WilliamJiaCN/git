@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.bill.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.enums.biz.bill.BillDiscardTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 单据作废请求DTO

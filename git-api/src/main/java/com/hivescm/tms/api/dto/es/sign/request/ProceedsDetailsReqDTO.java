@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.sign.request;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 /**
  * 
 * <p>Title:ProceedsDetailsReqDTO </p>

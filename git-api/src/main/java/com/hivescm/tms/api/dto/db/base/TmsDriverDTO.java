@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.db.base;
 
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
  * 司机信息组合Dto

@@ -1,12 +1,10 @@
 package com.hivescm.tms.api.dto.es.distribution;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 @Data
 @ToString
 public class DistributionWaybillStockEsDTO implements Serializable{

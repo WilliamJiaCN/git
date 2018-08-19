@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.global.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.enums.capacity.global.LogisticsOrganizationEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 请求boss物流组织dto
  * @author Administrator

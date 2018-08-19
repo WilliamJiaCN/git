@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.enums.capacity.order.OrderOperateTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 承运商运单分配接单请求（接单、拒接、超时未接）

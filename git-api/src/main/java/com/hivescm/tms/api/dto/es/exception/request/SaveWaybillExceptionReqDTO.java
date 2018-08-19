@@ -2,10 +2,7 @@ package com.hivescm.tms.api.dto.es.exception.request;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionAttachEsDTO;
-import com.hivescm.tms.api.dto.es.exception.WaybillExceptionEsDTO;
-import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import com.hivescm.tms.api.enums.waybillexception.ExceptionStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

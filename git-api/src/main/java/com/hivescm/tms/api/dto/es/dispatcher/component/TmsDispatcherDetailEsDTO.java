@@ -1,5 +1,7 @@
 package com.hivescm.tms.api.dto.es.dispatcher.component;
 
+import com.hivescm.tms.api.dto.es.dispatcher.DispatcherDetailEsDTO;
+import com.hivescm.tms.api.dto.es.dispatcher.DispatcherGoodsEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
@@ -7,9 +9,6 @@ import lombok.ToString;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.hivescm.tms.api.dto.es.dispatcher.DispatcherDetailEsDTO;
-import com.hivescm.tms.api.dto.es.dispatcher.DispatcherGoodsEsDTO;
 
 /**
  * 派车单明细信息封装，

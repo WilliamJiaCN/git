@@ -1,15 +1,13 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.dto.es.order.OrderEsDTO;
-import com.hivescm.tms.api.dto.es.order.component.TmsOrderInfoDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 /**
  * 接单请求体
  * @author Administrator

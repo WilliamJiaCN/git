@@ -1,10 +1,9 @@
 package com.hivescm.tms.api.dto.es.waybill.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
+
+import java.io.Serializable;
 
 /**
  * 客户价格请求DTO

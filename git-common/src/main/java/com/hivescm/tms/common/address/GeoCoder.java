@@ -1,8 +1,7 @@
 package com.hivescm.tms.common.address;
 
-import lombok.ToString;
-
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
 

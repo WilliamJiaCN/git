@@ -3,17 +3,16 @@
  */
 package com.hivescm.tms.api.dto.es.accusedgoods.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.enums.bill.accusedgoods.AccusedGoodsOperateTypeEnum;
 import com.hivescm.tms.api.enums.bill.accusedgoods.AccusedGoodsStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @author boqiang.deng

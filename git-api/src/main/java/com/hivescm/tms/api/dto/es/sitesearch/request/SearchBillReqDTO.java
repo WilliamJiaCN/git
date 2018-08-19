@@ -1,14 +1,10 @@
 package com.hivescm.tms.api.dto.es.sitesearch.request;
 
-import java.io.Serializable;
-
-import com.hivescm.tms.api.enums.biz.sitesearch.SearchBillConditionExpressionEnum;
-import com.hivescm.tms.api.enums.biz.sitesearch.SearchBillConditionTypeEnum;
-import com.hivescm.tms.api.enums.biz.sitesearch.SearchBillDateEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 综合查询多条件检索单据请求实体

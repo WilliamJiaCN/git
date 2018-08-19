@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.global.redundancy;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 经销商设置承运商线路DTO

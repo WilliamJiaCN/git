@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.waybill.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 修改运单预约提货和送货时间请求体

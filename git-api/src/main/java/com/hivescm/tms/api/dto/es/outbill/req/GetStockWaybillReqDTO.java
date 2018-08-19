@@ -1,8 +1,8 @@
 package com.hivescm.tms.api.dto.es.outbill.req;
 
-import java.io.Serializable;
-
 import lombok.Data;
+
+import java.io.Serializable;
 @Data
 public class GetStockWaybillReqDTO implements Serializable {
 

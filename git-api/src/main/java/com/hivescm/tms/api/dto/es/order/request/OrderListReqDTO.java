@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.enums.capacity.order.OrderSearchTimerTypeEnum;
 import com.hivescm.tms.api.enums.capacity.order.OrderStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 订单列表请求DTO

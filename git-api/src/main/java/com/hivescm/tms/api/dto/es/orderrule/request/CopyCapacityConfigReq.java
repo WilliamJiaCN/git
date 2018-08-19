@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.orderrule.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.orderrule.CarrierCapacityConfigEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 /**
  * 提交承运商运力 请求体
  * @author Administrator

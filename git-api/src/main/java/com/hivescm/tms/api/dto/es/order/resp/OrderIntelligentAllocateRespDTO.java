@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.order.resp;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 订单智能分配 resp DTO

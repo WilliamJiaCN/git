@@ -1,10 +1,10 @@
 package com.hivescm.tms.common.address;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 定位数据，经纬度、行政区划

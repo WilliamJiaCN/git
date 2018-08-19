@@ -1,9 +1,9 @@
 package com.hivescm.tms.common.address;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 @Data
 @ToString
 public class RoutematrixResult implements  Serializable {

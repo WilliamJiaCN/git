@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * RF 端操作数据对象

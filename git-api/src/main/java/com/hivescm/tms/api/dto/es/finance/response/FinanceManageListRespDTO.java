@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.finance.FinanceManagePayEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 应付列表返回实体

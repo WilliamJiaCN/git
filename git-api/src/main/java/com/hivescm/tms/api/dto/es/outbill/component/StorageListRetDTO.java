@@ -1,8 +1,9 @@
 package com.hivescm.tms.api.dto.es.outbill.component;
 
-import java.util.List;
 import com.hivescm.tms.api.dto.es.storage.StorageInfoEsDTO;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.List;
 public class StorageListRetDTO {
 	
 	@ApiModelProperty("总条数") 

@@ -1,15 +1,13 @@
 package com.hivescm.tms.api.dto.es.dispatcher.towarehouse;
 
+import com.hivescm.framework.logger.api.annotation.Logger;
+import com.hivescm.framework.validation.annotation.Required;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-import com.hivescm.framework.logger.api.annotation.Logger;
-import com.hivescm.framework.validation.annotation.Required;
 
 
 /**

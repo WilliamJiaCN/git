@@ -2,13 +2,11 @@ package com.hivescm.tms.api.dto.es.delivery;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.validation.annotation.Required;
-import com.hivescm.tms.api.dto.es.global.GlobalServiceProviderLineConfigEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
 //快递服务设置（仓库快递公司关系）
 @Data
 @ToString

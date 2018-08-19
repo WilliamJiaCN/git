@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.outbill.component;
 
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.outbill.resp.OutBillWaybillDTO;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.List;
 public class OutWaybillListRetDTO {
 	
 	@ApiModelProperty("总条数") 

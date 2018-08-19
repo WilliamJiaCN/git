@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.finance;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.enums.finance.FinanceTransferStatusEnum;
 import lombok.Data;
 import lombok.ToString;
 

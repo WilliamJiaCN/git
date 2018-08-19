@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.sitesearch.redundancy;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 调拨信息

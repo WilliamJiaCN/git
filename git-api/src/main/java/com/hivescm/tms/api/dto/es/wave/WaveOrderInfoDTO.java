@@ -1,11 +1,10 @@
 package com.hivescm.tms.api.dto.es.wave;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @ToString
 @Data

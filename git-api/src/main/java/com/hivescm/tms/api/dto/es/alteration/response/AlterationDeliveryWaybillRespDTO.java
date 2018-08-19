@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.alteration.response;
 
-import java.io.Serializable;
-
 import com.hivescm.tms.api.enums.bill.alteration.AlterationQueryRespTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 自提改配送获取运单信息

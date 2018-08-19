@@ -1,8 +1,8 @@
 package com.hivescm.tms.api.dto.es.waybill.request;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
+import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

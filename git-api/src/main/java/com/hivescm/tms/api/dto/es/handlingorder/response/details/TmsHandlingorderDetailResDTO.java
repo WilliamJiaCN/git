@@ -2,7 +2,6 @@ package com.hivescm.tms.api.dto.es.handlingorder.response.details;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.handlingorder.savData.HandlingorderGoodsReqDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

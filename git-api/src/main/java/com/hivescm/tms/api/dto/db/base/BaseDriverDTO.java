@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.db.base;
 
 
-import java.io.Serializable;
-import java.util.Date;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author 

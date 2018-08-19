@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.global;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 经销商设置承运商关联表 

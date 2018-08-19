@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.finance.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.finance.FinanceManageCashSerialEsDTO;
 import com.hivescm.tms.api.dto.es.finance.FinanceManageCashTransferEsDTO;
 import com.hivescm.tms.api.enums.finance.FinanceTransferStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

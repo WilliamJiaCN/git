@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.global.redundancy;
 
-import java.io.Serializable;
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 经销商设置承运商DTO

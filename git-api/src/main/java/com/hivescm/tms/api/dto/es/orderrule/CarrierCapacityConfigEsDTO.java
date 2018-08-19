@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.orderrule;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 @ToString
 @Data
 public class CarrierCapacityConfigEsDTO implements Serializable{

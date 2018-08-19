@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 城配司机个人中心统计响应DTO

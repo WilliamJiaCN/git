@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

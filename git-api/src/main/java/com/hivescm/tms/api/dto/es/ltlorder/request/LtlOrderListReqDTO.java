@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.ltlorder.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.enums.capacity.ltlorder.LtlOrderDeliveryTypeEnum;
 import com.hivescm.tms.api.enums.capacity.ltlorder.LtlOrderSearchTimerTypeEnum;
 import com.hivescm.tms.api.enums.capacity.ltlorder.LtlOrderStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 订单列表请求DTO

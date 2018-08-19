@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.packageinfo.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.packageinfo.PackageInfoEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

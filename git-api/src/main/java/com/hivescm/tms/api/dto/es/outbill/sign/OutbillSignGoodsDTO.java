@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.outbill.sign;
 
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
 @Data
 @ToString
 public class OutbillSignGoodsDTO {

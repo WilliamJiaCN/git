@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.receipt.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 回单接收请求DTO

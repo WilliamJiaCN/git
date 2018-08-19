@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.query.waybill;
 
 import com.hivescm.tms.api.dto.es.base.request.PageQurey;
-
 import lombok.Data;
 import lombok.ToString;
 @Data

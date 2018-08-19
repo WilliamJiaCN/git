@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.dispatcher.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 派车单查询待处理运单、库存运单查询条件

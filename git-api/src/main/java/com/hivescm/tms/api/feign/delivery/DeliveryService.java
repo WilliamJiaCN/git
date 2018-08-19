@@ -1,17 +1,16 @@
 package com.hivescm.tms.api.feign.delivery;
 
-import java.util.List;
-
+import com.hivescm.common.domain.DataResult;
+import com.hivescm.tms.api.dto.es.delivery.DeliveryLogisticsInfoDTO;
+import com.hivescm.tms.api.dto.es.delivery.OrderDeliveryCodeInfoDTO;
+import com.hivescm.tms.constants.FeignEnvironment;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.hivescm.common.domain.DataResult;
-import com.hivescm.tms.api.dto.es.delivery.DeliveryLogisticsInfoDTO;
-import com.hivescm.tms.api.dto.es.delivery.OrderDeliveryCodeInfoDTO;
-import com.hivescm.tms.constants.FeignEnvironment;
+import java.util.List;
 
 /**
  * 运力分配快递服务

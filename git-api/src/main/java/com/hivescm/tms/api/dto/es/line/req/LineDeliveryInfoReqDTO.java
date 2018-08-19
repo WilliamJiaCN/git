@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.line.req;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 @Data
 @ToString
 public class LineDeliveryInfoReqDTO implements Serializable{

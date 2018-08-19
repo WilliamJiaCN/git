@@ -3,6 +3,7 @@ package com.hivescm.tms.api.dto.es.delivery.req;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
 import java.io.Serializable;
 
 /**

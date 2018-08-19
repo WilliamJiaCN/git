@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.distribution.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherStatusEnum;
 import com.hivescm.tms.api.enums.biz.dispatcher.DistributionBillTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author  boqiang.deng

@@ -1,7 +1,5 @@
 package com.hivescm.tms.api.enums.biz.finance;
 
-import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherSourceTypeEnum;
-
 /**
  * 
  * <p>

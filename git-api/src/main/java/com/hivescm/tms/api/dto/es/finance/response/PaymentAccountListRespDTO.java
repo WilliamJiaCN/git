@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 /**
  * 账户查询

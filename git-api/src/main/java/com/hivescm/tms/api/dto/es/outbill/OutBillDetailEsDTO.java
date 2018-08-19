@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.outbill;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.framework.elasticsearch.annotation.Cascade;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.List;
 @Data
 @ToString
 @Cascade(value = "destName", fields = { "receiptProvName", "receiptCityName", "receiptDistrictName" })

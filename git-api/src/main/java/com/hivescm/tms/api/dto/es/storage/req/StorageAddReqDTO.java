@@ -1,16 +1,13 @@
 package com.hivescm.tms.api.dto.es.storage.req;
 
-import java.util.List;
-
+import com.hivescm.tms.api.dto.es.storage.StorageFeeEsDTO;
 import com.hivescm.tms.api.dto.es.storage.StorageInfoEsDTO;
 import com.hivescm.tms.api.dto.es.storage.common.StorageDetailDTO;
-
 import io.swagger.annotations.ApiModelProperty;
-
-import com.hivescm.tms.api.dto.es.storage.StorageFeeEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 @Data
 @ToString

@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.bill.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 单据批次详情列表请求DTO

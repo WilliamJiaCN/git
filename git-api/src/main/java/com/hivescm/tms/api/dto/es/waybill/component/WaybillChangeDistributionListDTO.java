@@ -1,8 +1,9 @@
 package com.hivescm.tms.api.dto.es.waybill.component;
 
-import java.util.List;
 import com.hivescm.tms.api.dto.es.waybill.WaybillChangeDistributionEsDTO;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.List;
 public class WaybillChangeDistributionListDTO {
 	
 	@ApiModelProperty("总条数") 

@@ -1,9 +1,10 @@
 package com.hivescm.tms.api.dto.common;
 
-import java.io.Serializable;
-import java.util.List;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

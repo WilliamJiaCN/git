@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.waybill.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 承运商首页统计请求体 DTO

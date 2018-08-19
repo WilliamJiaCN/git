@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.exception.request;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 罚款单明细查询请求对象

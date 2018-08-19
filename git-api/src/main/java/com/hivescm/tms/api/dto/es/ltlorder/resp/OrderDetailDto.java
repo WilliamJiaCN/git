@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.ltlorder.resp;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.ltlorder.UsuallySendGoodsEsDto;
 import com.hivescm.tms.api.dto.es.waybill.WaybillFeeEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @ToString

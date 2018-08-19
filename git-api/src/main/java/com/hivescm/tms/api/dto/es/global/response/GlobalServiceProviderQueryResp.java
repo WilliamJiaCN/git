@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.global.response;
 
-import java.io.Serializable;
-
 import com.hivescm.tms.api.dto.es.global.GlobalServiceProviderConfigEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString
