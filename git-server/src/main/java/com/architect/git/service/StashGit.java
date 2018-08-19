@@ -3,6 +3,6 @@ package com.architect.git.service;
 public class StashGit {
     public static void main(String[] args) {
         System.out.println("修复101bug");
-        System.out.println("冲突测试-用户1");
+        System.out.println("冲突测试-用户2");
     }
 }
