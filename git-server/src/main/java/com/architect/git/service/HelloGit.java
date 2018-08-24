@@ -4,7 +4,6 @@ public class HelloGit {
     public static void main(String[] args) {
         System.out.println("Hello Git");
         System.out.println("冲突测试-用户2");
-        System.out.println("分支合并冲突");
-        System.out.println("分支合并冲突2");
+        System.out.println("dev修改2");
     }
 }
