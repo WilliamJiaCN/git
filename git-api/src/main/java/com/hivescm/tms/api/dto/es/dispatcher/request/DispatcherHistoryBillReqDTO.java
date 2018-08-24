@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.dispatcher.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherHistorySearchConditionsEnum;
 import com.hivescm.tms.api.enums.biz.waybill.WaybillStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

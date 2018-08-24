@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.line.req;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.enums.capacity.line.LineCityDeliveryServiceStatusEnum;
 import com.hivescm.tms.api.enums.capacity.line.LineCityDeliveryServiceTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 @Data
 @ToString
 public class LineCityDeliveryServiceReqDTO implements Serializable {

@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.sitesearch.redundancy;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 短途到货信息

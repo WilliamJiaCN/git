@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-
 import com.hivescm.tms.api.dto.es.order.OrderCapacityEsDTO;
 import com.hivescm.tms.api.dto.es.order.OrderEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 承运商接单、拒接、超时未接外部调用

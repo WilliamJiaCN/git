@@ -1,6 +1,8 @@
 package com.hivescm.tms.api.dto.es.transport.component;
 
-import com.hivescm.tms.api.dto.es.transport.*;
+import com.hivescm.tms.api.dto.es.transport.TransportArrivalInfoEsDTO;
+import com.hivescm.tms.api.dto.es.transport.TransportInfoEsDTO;
+import com.hivescm.tms.api.dto.es.transport.TransportWaybillDetailEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

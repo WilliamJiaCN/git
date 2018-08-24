@@ -2,7 +2,6 @@ package com.hivescm.tms.api.dto.es.dispatcher.response;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.sign.response;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 查询支付结果返回DTO
  * @author lhf

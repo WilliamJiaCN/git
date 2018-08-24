@@ -4,7 +4,6 @@ import com.hivescm.framework.common.exception.ExceptionFactory;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.enums.bill.alteration.AlterationProcessStatusEnum;
 import com.hivescm.tms.api.enums.bill.alteration.ReceiveTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

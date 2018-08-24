@@ -3,14 +3,13 @@
  */
 package com.hivescm.tms.api.dto.es.stock.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.escenter.common.conditions.SearchCondition;
 import com.hivescm.framework.validation.annotation.Required;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author  boqiang.deng

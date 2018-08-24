@@ -1,12 +1,12 @@
 package com.hivescm.tms.api.dto.es.distribution.request;
-import java.io.Serializable;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.enums.biz.dispatcher.DistributionVehicleStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 车辆状态请求DTO

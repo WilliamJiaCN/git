@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.finance.component;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

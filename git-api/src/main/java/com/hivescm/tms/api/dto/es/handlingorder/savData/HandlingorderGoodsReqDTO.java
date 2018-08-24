@@ -1,14 +1,12 @@
 package com.hivescm.tms.api.dto.es.handlingorder.savData;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 @Data
 @ToString
 public class HandlingorderGoodsReqDTO implements Serializable{

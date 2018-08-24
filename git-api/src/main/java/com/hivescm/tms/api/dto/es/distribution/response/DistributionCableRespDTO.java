@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.distribution.redundancy.DistributionDriverVehicleCableDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 城配智能调度一键排线响应实体

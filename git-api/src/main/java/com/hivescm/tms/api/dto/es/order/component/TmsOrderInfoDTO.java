@@ -3,7 +3,6 @@ package com.hivescm.tms.api.dto.es.order.component;
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.dto.es.order.OrderCapacityEsDTO;
 import com.hivescm.tms.api.dto.es.order.OrderEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
 

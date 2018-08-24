@@ -1,15 +1,6 @@
 package com.hivescm.tms.utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.hivescm.cache.client.JedisClient;
-import com.hivescm.common.exception.SystemException;
-import com.hivescm.tms.constants.ExceptionCodeConstants;
 
 @Service
 public class RedisUserInfoUtils {

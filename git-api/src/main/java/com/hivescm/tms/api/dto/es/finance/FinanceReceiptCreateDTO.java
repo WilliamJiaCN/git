@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.finance;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.sign.SignEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 根据签收单信息生成收款单

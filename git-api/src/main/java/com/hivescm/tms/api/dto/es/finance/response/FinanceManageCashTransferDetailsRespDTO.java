@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

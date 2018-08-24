@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.global;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 /**
  * 经销商选取承运商线路信息
  * @author ke.huang

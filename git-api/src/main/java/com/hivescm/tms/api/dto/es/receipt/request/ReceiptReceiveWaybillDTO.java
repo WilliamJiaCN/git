@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.receipt.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 接收回单库存运单信息

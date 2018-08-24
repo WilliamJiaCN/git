@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.distribution.request;
 
-import java.io.Serializable;
-import java.util.List;
-
-import com.hivescm.tms.api.dto.es.transport.TransportArrivalCostDetailEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 城配指派司机请求DTO

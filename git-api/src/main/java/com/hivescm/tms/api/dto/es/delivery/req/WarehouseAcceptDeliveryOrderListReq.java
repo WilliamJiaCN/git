@@ -1,9 +1,10 @@
 package com.hivescm.tms.api.dto.es.delivery.req;
 
-import java.io.Serializable;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 快递公司仓库接单统计 请求体
  * @author Administrator

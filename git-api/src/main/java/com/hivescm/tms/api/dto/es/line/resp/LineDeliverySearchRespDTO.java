@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.line.resp;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.line.LineAreaEsDTO;
 import com.hivescm.tms.api.dto.es.line.LineElectronicFenceEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @Data
 @ToString
 public class LineDeliverySearchRespDTO implements Serializable{

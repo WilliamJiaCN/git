@@ -1,31 +1,22 @@
 package com.hivescm.tms.api.dto.es.transport.request;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.apache.commons.collections.CollectionUtils;
-
-import com.google.common.base.Objects;
 import com.hivescm.common.exception.SystemException;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.validation.annotation.Required;
-import com.hivescm.tms.api.dto.es.transport.TransportCostDetailEsDTO;
-import com.hivescm.tms.api.dto.es.transport.TransportGoodsDetailEsDTO;
-import com.hivescm.tms.api.dto.es.transport.TransportInfoEsDTO;
-import com.hivescm.tms.api.dto.es.transport.TransportLineEsDTO;
-import com.hivescm.tms.api.dto.es.transport.TransportWaybillDetailEsDTO;
+import com.hivescm.tms.api.dto.es.transport.*;
 import com.hivescm.tms.api.dto.es.transport.component.TmsTransportDetailDTO;
-import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherFeeShareTypeEnum;
 import com.hivescm.tms.api.enums.biz.transport.DepartTypeEnum;
 import com.hivescm.tms.api.enums.biz.transport.TransportWaybillStatusEnum;
 import com.hivescm.tms.constants.ExceptionCodeConstants;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+import org.apache.commons.collections.CollectionUtils;
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 保存运输批次请求信息，用户新增、修改接口

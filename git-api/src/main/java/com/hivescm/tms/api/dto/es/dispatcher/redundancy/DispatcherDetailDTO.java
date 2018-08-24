@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.dispatcher.redundancy;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 派车单明细冗余派车单信息

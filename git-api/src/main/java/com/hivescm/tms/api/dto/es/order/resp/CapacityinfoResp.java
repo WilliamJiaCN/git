@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.order.resp;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 手动分配查询运力信息返回信息

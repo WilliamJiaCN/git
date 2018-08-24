@@ -5,13 +5,12 @@ package com.hivescm.tms.api.dto.message;
  * @since   2017/8/11
 */
 
-import java.io.Serializable;
-
 import com.hivescm.tms.api.enums.biz.messsage.SmsSendTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString

@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.enums.biz.dispatcher.DistributionVehicleStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 城配司机车辆Response DTO

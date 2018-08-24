@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.transport.request;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.dto.es.transport.TransportCostDetailEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 车费更改

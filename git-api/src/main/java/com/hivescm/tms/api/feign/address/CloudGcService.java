@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.feign.address;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import com.hivescm.common.domain.DataResult;
 import com.hivescm.tms.common.address.CloudGCReq;
 import com.hivescm.tms.common.address.CloudGCRes;
 import com.hivescm.tms.constants.FeignEnvironment;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * TMS地址库GIS服务
@@ -19,7 +18,7 @@ import com.hivescm.tms.constants.FeignEnvironment;
 public interface CloudGcService {
     /**
      * 获取文本地址坐标
-     * @param CloudGCReq
+     * @param
      * @return
      */	
     @PostMapping(value = "/cloudGC/parseAddress")

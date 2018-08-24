@@ -1,11 +1,10 @@
 package com.hivescm.tms.api.dto.es.transport.request;
 
-import java.io.Serializable;
-import java.util.Arrays;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 运单请求体

@@ -2,13 +2,11 @@ package com.hivescm.tms.api.dto.es.finance.request;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.validation.annotation.Required;
-import com.hivescm.tms.api.dto.es.sign.SignEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * @Author sql

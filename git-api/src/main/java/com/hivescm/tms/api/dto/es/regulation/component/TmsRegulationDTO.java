@@ -1,12 +1,12 @@
 package com.hivescm.tms.api.dto.es.regulation.component;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.regulation.RegulationInfoEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @Data
 @ToString
 public class TmsRegulationDTO implements Serializable {

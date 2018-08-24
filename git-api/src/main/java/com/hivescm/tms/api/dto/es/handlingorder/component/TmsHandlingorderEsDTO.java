@@ -1,18 +1,14 @@
 package com.hivescm.tms.api.dto.es.handlingorder.component;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.apache.commons.collections.CollectionUtils;
-
 import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderDetailEsDTO;
 import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderEsDTO;
-import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderFeeEsDTO;
-import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderGoodsEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+import org.apache.commons.collections.CollectionUtils;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 派车单信息

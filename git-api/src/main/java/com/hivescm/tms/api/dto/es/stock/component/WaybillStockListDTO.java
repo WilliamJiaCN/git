@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.stock.component;
 
+import com.hivescm.tms.api.dto.es.stock.response.TransferStockEsDTO;
+
 import java.io.Serializable;
 import java.util.List;
-
-import com.hivescm.tms.api.dto.es.stock.response.TransferStockEsDTO;
 
 public class WaybillStockListDTO implements Serializable{
 

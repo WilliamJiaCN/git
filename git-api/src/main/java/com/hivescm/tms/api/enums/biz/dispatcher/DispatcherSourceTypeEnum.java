@@ -1,7 +1,5 @@
 package com.hivescm.tms.api.enums.biz.dispatcher;
 
-import com.hivescm.tms.api.enums.biz.waybill.WaybillFeeTypeEnum;
-
 /**
  * 派车单来源类型
  * @author lutingting

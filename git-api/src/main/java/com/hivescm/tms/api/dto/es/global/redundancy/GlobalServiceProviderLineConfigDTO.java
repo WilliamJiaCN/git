@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.global.redundancy;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.enums.capacity.global.LogisticsOrganizationEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 @Data
 @ToString
 public class GlobalServiceProviderLineConfigDTO implements Serializable{

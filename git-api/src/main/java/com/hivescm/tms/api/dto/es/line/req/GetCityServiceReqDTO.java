@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.line.req;
 
-import java.io.Serializable;
-
-import org.springframework.stereotype.Service;
-
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 @Data
 @Service
 public class GetCityServiceReqDTO implements Serializable{

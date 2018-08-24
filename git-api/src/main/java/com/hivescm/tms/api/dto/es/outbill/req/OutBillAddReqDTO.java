@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.outbill.req;
 
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.outbill.OutBillCompanyEsDTO;
 import com.hivescm.tms.api.dto.es.outbill.OutBillDetailEsDTO;
 import com.hivescm.tms.api.dto.es.outbill.OutBillFeeEsDTO;
 import com.hivescm.tms.api.dto.es.outbill.OutBillInfoEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 @Data
 @ToString

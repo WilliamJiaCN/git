@@ -1,6 +1,5 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import com.hivescm.tms.api.dto.es.finance.FinanceManageGoodsGrantEsDTO;
 import com.hivescm.tms.api.dto.es.finance.FinanceManageGoodsRecycleEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

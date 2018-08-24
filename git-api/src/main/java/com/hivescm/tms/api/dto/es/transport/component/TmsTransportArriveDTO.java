@@ -3,7 +3,6 @@ package com.hivescm.tms.api.dto.es.transport.component;
 import com.hivescm.tms.api.dto.es.transport.TransportArrivalCostDetailEsDTO;
 import com.hivescm.tms.api.dto.es.transport.TransportArrivalInfoEsDTO;
 import com.hivescm.tms.api.dto.es.transport.TransportInfoEsDTO;
-
 import com.hivescm.tms.api.dto.es.transport.TransportLineEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

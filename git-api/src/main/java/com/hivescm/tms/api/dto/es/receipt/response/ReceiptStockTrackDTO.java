@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.receipt.response;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 回单轨迹response DTO

@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 通过承运商名称插叙运力请求dto

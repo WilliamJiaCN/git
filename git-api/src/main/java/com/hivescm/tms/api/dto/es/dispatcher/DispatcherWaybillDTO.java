@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.dispatcher;
 
 import com.google.common.collect.Lists;
-import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillStockEsDTO;
+import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

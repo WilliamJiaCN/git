@@ -1,8 +1,8 @@
 package com.hivescm.tms.api.dto.es.base.request;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
+
+import java.io.Serializable;
 
 /**
  * ClassName:PageQurey <br/>

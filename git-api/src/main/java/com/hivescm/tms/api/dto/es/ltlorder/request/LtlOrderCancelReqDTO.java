@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.ltlorder.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 零担订单取消请求DTO

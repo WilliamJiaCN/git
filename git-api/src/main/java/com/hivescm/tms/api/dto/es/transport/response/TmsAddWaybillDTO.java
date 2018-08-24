@@ -1,14 +1,12 @@
 package com.hivescm.tms.api.dto.es.transport.response;
 
-import java.io.Serializable;
-import java.util.List;
-
-import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.waybill.component.TmsWaybillEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 单票添加返回信息

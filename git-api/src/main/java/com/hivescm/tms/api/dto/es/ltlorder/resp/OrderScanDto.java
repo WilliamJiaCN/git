@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.ltlorder.resp;
 
 
-import java.math.BigDecimal;
-import java.util.Objects;
-
 import com.hivescm.framework.common.utils.StringUtils;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.Objects;
 
 @Data
 @ToString

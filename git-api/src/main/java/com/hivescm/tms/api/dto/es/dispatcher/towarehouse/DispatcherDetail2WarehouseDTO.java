@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.dispatcher.towarehouse;
 
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

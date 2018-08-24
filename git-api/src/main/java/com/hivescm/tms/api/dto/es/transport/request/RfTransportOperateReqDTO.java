@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.transport.request;
 
+import com.hivescm.framework.entitymapping.annotation.Mapping;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.List;
-
-import com.hivescm.framework.entitymapping.annotation.Mapping;
 
 /**
  * RF 端操作数据对象

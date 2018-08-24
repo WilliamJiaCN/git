@@ -3,13 +3,12 @@
  */
 package com.hivescm.tms.api.dto.es.accusedgoods.request;
 
-import java.io.Serializable;
-import java.util.List;
-
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author  boqiang.deng

@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.ltlorder.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 更新订单派车批次请求DTO

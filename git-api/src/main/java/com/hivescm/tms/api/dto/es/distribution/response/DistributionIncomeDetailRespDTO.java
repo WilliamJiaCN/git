@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 
 /**

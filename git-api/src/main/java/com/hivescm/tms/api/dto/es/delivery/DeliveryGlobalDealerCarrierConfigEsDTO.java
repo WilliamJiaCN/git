@@ -1,15 +1,11 @@
 package com.hivescm.tms.api.dto.es.delivery;
 
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.dto.es.delivery.component.TmsDeliveryCompanyEsDTO;
-import com.hivescm.tms.api.dto.es.delivery.resp.DeliveryCompanyRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 快递经销商选取承运商规则

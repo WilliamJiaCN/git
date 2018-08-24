@@ -1,11 +1,10 @@
 package com.hivescm.tms.api.dto.es.outbill.resp;
 
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.outbill.OutBillCompanyEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 @ToString
 @Data

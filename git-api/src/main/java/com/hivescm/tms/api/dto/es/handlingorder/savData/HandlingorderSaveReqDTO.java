@@ -1,16 +1,12 @@
 package com.hivescm.tms.api.dto.es.handlingorder.savData;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderEsDTO;
-import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderFeeEsDTO;
-import com.hivescm.tms.api.dto.es.handlingorder.component.TmsHandlingorderDetailEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @Data
 @ToString
 public class HandlingorderSaveReqDTO implements Serializable{

@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.receipt.response;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.receipt.ReceiptTransmitReceiveEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 回单寄出接收批次列表响应DTO

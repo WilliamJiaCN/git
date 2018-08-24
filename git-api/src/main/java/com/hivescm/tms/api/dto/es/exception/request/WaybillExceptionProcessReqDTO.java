@@ -1,17 +1,15 @@
 package com.hivescm.tms.api.dto.es.exception.request;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.apache.commons.collections.CollectionUtils;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionAttachEsDTO;
 import com.hivescm.tms.api.dto.es.exception.WaybillExceptionProcessEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+import org.apache.commons.collections.CollectionUtils;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
 @ToString

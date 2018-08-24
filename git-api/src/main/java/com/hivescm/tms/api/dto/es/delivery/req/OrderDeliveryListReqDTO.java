@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.delivery.req;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 订单列表请求DTO

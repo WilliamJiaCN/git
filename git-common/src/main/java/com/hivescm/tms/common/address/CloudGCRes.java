@@ -1,10 +1,9 @@
 package com.hivescm.tms.common.address;
 
 
+import lombok.Data;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import lombok.Data;
 
 /**
  * description

@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.es.sign.component;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 /**
  * 
 * <p>Title:VerificationCodeDTO </p>

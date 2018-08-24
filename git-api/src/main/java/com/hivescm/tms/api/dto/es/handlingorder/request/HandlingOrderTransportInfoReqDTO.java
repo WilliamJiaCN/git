@@ -1,6 +1,5 @@
 package com.hivescm.tms.api.dto.es.handlingorder.request;
 
-import com.hivescm.framework.validation.annotation.Required;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

@@ -5,8 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
-
 /**
  * @Author sql
  * @Date 16:082018\5\12 0012

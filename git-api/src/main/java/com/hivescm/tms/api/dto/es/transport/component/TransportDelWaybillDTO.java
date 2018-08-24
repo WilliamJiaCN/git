@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.transport.component;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.transport.TransportGoodsDetailEsDTO;
 import com.hivescm.tms.api.dto.es.transport.TransportInfoEsDTO;
 import com.hivescm.tms.api.dto.es.transport.TransportLineEsDTO;
 import com.hivescm.tms.api.dto.es.transport.TransportWaybillDetailEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * tms单票移除

@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.ltlorder.request;
 
-import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
-
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 零担订单运单请求DTO

@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.distribution.redundancy;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.distribution.response.DistributionDriverVehicleRespEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 城配智能调度一键排线司机车辆冗余实体

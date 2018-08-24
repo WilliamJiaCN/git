@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.dispatcher.response;
 
-import java.math.BigDecimal;
-import java.util.List;
-
-import com.hivescm.tms.api.dto.es.dispatcher.DispatcherFeeEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.List;
 @Data
 @ToString
 public class DispatcherTaskHistoryResqDTO {

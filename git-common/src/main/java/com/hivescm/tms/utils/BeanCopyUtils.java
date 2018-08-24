@@ -1,9 +1,9 @@
 package com.hivescm.tms.utils;
 
+import net.sf.cglib.beans.BeanCopier;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import net.sf.cglib.beans.BeanCopier;
 
 public class BeanCopyUtils {
 	/**

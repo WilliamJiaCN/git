@@ -1,17 +1,15 @@
 package com.hivescm.tms.api.feign.base;
 
-import java.util.List;
-
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import com.hivescm.common.domain.DataResult;
 import com.hivescm.tms.api.dto.db.base.BaseDriverDTO;
 import com.hivescm.tms.api.dto.db.base.BaseVehicleDTO;
 import com.hivescm.tms.api.dto.es.base.request.VehicleQueryDTO;
-import com.hivescm.tms.api.dto.es.dispatcher.towarehouse.Dispatcher2WarehouseDTO;
 import com.hivescm.tms.constants.FeignEnvironment;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 @FeignClient(value = FeignEnvironment.BASE_SERVER_NAME, path = FeignEnvironment.BASE_SERVER_PATH)
 public interface VehicleService {

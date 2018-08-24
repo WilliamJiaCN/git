@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.distribution.response;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @author boqiang.deng

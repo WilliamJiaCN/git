@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.finance.response;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 账户查询

@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.receipt;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.common.exception.ExceptionFactory;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 /**
  * 回单发放批次
  * @author ke.huang

@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.print.waybill;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 @Data
 public class WaybillGoodsPrintDTO implements Serializable {

@@ -1,19 +1,17 @@
 package com.hivescm.tms.api.dto.es.dispatcher.component;
 
-import java.io.Serializable;
-import java.util.List;
-
-import org.apache.commons.collections.CollectionUtils;
-
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.dto.es.dispatcher.DispatcherDetailEsDTO;
 import com.hivescm.tms.api.dto.es.dispatcher.DispatcherEsDTO;
 import com.hivescm.tms.api.dto.es.dispatcher.DispatcherFeeEsDTO;
 import com.hivescm.tms.api.enums.biz.dispatcher.DispatcherDetailStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+import org.apache.commons.collections.CollectionUtils;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 派车单信息

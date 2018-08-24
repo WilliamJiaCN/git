@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.order.resp;
 
-import java.io.Serializable;
-import java.util.List;
-
-import com.hivescm.tms.api.dto.es.order.request.ManualConfirmOrderReq;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @Data
 @ToString
 public class CapacityManualConfirmAllocationResp implements Serializable{

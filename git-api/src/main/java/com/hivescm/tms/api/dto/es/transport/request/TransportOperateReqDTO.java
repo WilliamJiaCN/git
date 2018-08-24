@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 运输批次操作通用请求对象

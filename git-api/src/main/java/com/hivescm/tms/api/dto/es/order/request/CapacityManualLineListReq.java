@@ -1,9 +1,9 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString

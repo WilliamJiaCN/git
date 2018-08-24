@@ -1,13 +1,11 @@
 package com.hivescm.tms.api.dto.es.sign.request;
 
+import com.hivescm.framework.logger.api.annotation.Logger;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.Date;
-
-import com.hivescm.framework.logger.api.annotation.Logger;
 
 /**
  * 拒收单查询请求实体

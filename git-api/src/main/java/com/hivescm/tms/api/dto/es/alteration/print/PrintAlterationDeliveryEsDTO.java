@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.alteration.print;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 自提改送货信息打印Es类

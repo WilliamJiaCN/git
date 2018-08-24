@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.schedule.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.distribution.response.DistributionDriverVehicleRespEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 城配智能匹配排线请求实体

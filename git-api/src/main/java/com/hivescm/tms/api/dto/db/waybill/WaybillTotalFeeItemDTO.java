@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.db.waybill;
 
+import com.hivescm.framework.validation.annotation.Required;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
-
-import com.hivescm.framework.validation.annotation.Required;
 
 /**
  * 派车单总费用计算项

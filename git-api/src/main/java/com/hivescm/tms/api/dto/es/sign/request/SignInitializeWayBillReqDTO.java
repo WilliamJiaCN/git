@@ -3,10 +3,10 @@
  */
 package com.hivescm.tms.api.dto.es.sign.request;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @author  boqiang.deng

@@ -3,16 +3,15 @@
  */
 package com.hivescm.tms.api.dto.es.sign.component;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.sign.SignDetailsEsDTO;
 import com.hivescm.tms.api.dto.es.sign.SignEsDTO;
 import com.hivescm.tms.api.dto.es.sign.SignRefuseEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 外发签收入参dto

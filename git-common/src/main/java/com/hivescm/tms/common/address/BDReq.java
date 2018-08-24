@@ -3,7 +3,6 @@ package com.hivescm.tms.common.address;
 import com.hivescm.tms.mockframe.annotation.DefaultRule;
 import lombok.Data;
 import lombok.ToString;
-
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;

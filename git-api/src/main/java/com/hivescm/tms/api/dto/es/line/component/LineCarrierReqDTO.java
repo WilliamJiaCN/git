@@ -1,16 +1,15 @@
 package com.hivescm.tms.api.dto.es.line.component;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.tms.api.dto.es.line.LineServiceEsDTO;
 import com.hivescm.tms.api.enums.capacity.line.SaveLineCarrierInfoTypeEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @ToString

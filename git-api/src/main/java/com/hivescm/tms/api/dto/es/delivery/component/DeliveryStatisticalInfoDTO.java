@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.delivery.component;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
+import java.util.List;
 @Data
 @ToString
 public class DeliveryStatisticalInfoDTO {

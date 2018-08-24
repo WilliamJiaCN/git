@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.handlingorder.component;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderDetailEsDTO;
 import com.hivescm.tms.api.dto.es.handlingorder.HandlingorderGoodsEsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 @Data
 @ToString
 public class TmsHandlingorderDetailEsDTO  implements Serializable {

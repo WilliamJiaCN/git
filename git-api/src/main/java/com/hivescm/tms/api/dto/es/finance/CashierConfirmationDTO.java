@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.finance;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.validation.annotation.Required;
 import com.hivescm.tms.api.dto.es.sign.SignEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;

@@ -6,9 +6,9 @@ import com.hivescm.tms.api.dto.es.sign.SignDetailsEsDTO;
 import com.hivescm.tms.api.dto.es.sign.SignEsDTO;
 import com.hivescm.tms.api.dto.es.sign.SignFeeEsDTO;
 import com.hivescm.tms.api.dto.es.sign.SignRefuseEsDTO;
+import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillFeeEsDTO;
-import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
 import lombok.Data;
 import lombok.ToString;
 

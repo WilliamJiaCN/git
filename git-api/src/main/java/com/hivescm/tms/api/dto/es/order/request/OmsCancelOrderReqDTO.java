@@ -1,14 +1,13 @@
 package com.hivescm.tms.api.dto.es.order.request;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.framework.validation.annotation.Required;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * OMS取消订单请求DTO

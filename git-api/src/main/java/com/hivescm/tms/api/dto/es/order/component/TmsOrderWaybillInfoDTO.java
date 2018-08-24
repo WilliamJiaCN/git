@@ -1,11 +1,10 @@
 package com.hivescm.tms.api.dto.es.order.component;
 
-import java.math.BigDecimal;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.math.BigDecimal;
 @Data
 @ToString
 public class TmsOrderWaybillInfoDTO {

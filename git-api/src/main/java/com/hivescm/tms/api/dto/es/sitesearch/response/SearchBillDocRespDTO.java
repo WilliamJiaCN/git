@@ -1,11 +1,11 @@
 package com.hivescm.tms.api.dto.es.sitesearch.response;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 综合查询所有单据响应实体

@@ -1,16 +1,13 @@
 package com.hivescm.tms.api.dto.es.dispatcher.component;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
-import com.hivescm.tms.api.dto.es.dispatcher.DispatcherDetailEsDTO;
-import com.hivescm.tms.api.dto.es.dispatcher.DispatcherGoodsEsDTO;
 import com.hivescm.tms.api.dto.es.dispatcher.DispatcherWaybillDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 待处理运单列表

@@ -1,26 +1,12 @@
 package com.hivescm.tms.api.dto.es.sitesearch.response;
 
-import java.io.Serializable;
-import java.util.List;
-
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.AllocationNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.BackorderNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.ChangeSendNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.DepartLoadingArrivalNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.DepartLoadingNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.DepartShortArrivalNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.DepartShortNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.DischargingNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.OuterhairNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.SendGoodsNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.ShippingNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.SignNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.TakeGoodsNodeDTO;
-import com.hivescm.tms.api.dto.es.sitesearch.redundancy.TransterNodeDTO;
-
+import com.hivescm.tms.api.dto.es.sitesearch.redundancy.*;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 综合查询 - 运营信息所有业务节点响应体

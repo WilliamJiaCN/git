@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.exception.redundancy;
 
-import java.io.Serializable;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 异常单据冗余运单信息

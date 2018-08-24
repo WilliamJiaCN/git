@@ -1,13 +1,12 @@
 package com.hivescm.tms.api.dto.es.cloud.response;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.hivescm.tms.common.address.FullLocation;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 百度云地址解析resp DTO

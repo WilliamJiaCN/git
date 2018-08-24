@@ -1,10 +1,10 @@
 package com.hivescm.tms.api.dto.db.waybill;
 
-import java.io.Serializable;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * @author 李洪春

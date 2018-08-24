@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.goodsuser;
 
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.models.auth.In;
 import lombok.Data;
 import lombok.ToString;
 

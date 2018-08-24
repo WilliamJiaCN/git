@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.es.sitesearch.response;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
 import com.hivescm.tms.api.dto.es.waybill.component.TmsWaybillEsDTO;
 import com.hivescm.tms.api.enums.biz.waybill.WaybillFinanceStatusEnum;
 import com.hivescm.tms.api.enums.biz.waybill.WaybillStatusEnum;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * 综合查询单据明细响应实体

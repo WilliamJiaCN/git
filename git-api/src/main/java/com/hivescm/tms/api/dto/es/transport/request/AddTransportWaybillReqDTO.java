@@ -1,7 +1,6 @@
 package com.hivescm.tms.api.dto.es.transport.request;
 
 import com.hivescm.tms.api.dto.es.transport.component.TmsTransportDetailDTO;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;

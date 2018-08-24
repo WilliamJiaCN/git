@@ -1,12 +1,11 @@
 package com.hivescm.tms.api.dto.es.dispatcher.response;
 
-import java.io.Serializable;
-
 import com.hivescm.tms.api.dto.es.dispatcher.component.TmsDispatcherEsDTO;
 import com.hivescm.tms.api.dto.es.waybill.WaybillEsDTO;
-
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 @Data
 @ToString

@@ -1,15 +1,14 @@
 package com.hivescm.tms.api.dto.db.base;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 @Data
 @ToString
 public class BaseVehicleDTO implements Serializable{

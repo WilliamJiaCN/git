@@ -1,16 +1,11 @@
 package com.hivescm.tms.api.dto.es.ltlorder.request;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.hivescm.framework.entitymapping.annotation.Mapping;
-import com.hivescm.framework.validation.annotation.Required;
-import com.hivescm.tms.api.dto.es.ltlorder.redundancy.LtlOrderGoodsDTO;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * 零担订单主表

@@ -9,11 +9,10 @@ import com.google.common.collect.Lists;
 import com.hivescm.framework.entitymapping.annotation.Mapping;
 import com.hivescm.framework.logger.api.annotation.Logger;
 import com.hivescm.tms.api.dto.es.packageinfo.PackageDetailEsDTO;
-import com.hivescm.tms.api.dto.es.waybill.WaybillFeeEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillGoodsEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillStockDetailEsDTO;
 import com.hivescm.tms.api.dto.es.stock.WaybillStockEsDTO;
-
+import com.hivescm.tms.api.dto.es.waybill.WaybillFeeEsDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
@@ -1272,7 +1271,7 @@ public class TmsWaybillEsDTO implements Serializable {
 	/**
 	 * 添加费用项
 	 *
-	 * @param waybillFeeEsDTO
+	 * @param
 	 *            费用项
 	 */
 	public void addWaybillStockDetail(WaybillStockDetailEsDTO waybillStockDetailEsDTO) {

@@ -1,7 +1,5 @@
 package com.hivescm.tms.api.enums.bill.receipt;
 
-import com.hivescm.tms.api.enums.biz.waybill.WaybillPayWayEnum;
-
 /**
  * 回单单据签收状态
  * 1=未签收 2=正常签收 3=部分签收 4=拒签
